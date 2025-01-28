@@ -1,14 +1,7 @@
 {
   "Common": {
     "appName": "FoodDist",
-    "loading": "Loading...",
-    "error": {
-      "title": "Error",
-      "unknown": "An unknown error occurred"
-    },
-    "success": {
-      "title": "Success"
-    }
+    "loading": "Loading..."
   },
   "Navigation": {
     "dashboard": "Dashboard",
@@ -18,14 +11,13 @@
     "profile": "Profile",
     "settings": "Settings",
     "feedback": "Feedback",
-    "testDashboard": "Test Dashboard",
+    "adminDashboard": "Admin Dashboard",
     "logout": "Logout"
   },
   "Auth": {
     "loginSuccess": "Login successful",
     "welcomeBack": "Welcome back!",
     "loginFailed": "Login failed",
-    "registrationSuccess": "Registration successful",
     "verifyEmail": "Please check your email to verify your account.",
     "registrationFailed": "Registration failed",
     "passwordTooWeak": "Password too weak",
@@ -33,31 +25,23 @@
     "passwordIsTooWeak": "Password is too weak",
     "passwordShouldBeAtLeastCharacters": "Password should be at least 6 characters long",
     "passwordShouldIncludeDifferentTypesOfCharacters": "Password should include different types of characters",
-    "passwordRequirements": {
-      "length": "Password should be at least 6 characters long",
-      "characters": "Password should include different types of characters"
-    }
+    "awaitingApproval": "Your registration request has been submitted and is awaiting admin approval."
   },
   "Analytics": {
     "title": "Analytics",
     "description": "View and analyze your data",
     "noData": "No data available",
     "filters": {
-      "dateRange": "Date Range",
       "startDate": "Start Date",
       "endDate": "End Date",
       "apply": "Apply Filters"
     },
     "metrics": {
       "totalOrders": "Total Orders",
-      "averageOrderValue": "Average Order Value",
-      "topItems": "Top Items",
-      "peakHours": "Peak Hours"
+      "averageOrderValue": "Average Order Value"
     },
     "charts": {
-      "daily": "Daily Orders",
-      "weekly": "Weekly Trends",
-      "monthly": "Monthly Overview"
+      "daily": "Daily Orders"
     }
   },
   "Profile": {
@@ -65,32 +49,18 @@
     "description": "Manage your account information",
     "personalInfo": {
       "title": "Personal Information",
-      "name": "Name",
       "email": "Email",
-      "role": "Role",
-      "phone": "Phone Number"
+      "role": "Role"
     },
     "security": {
       "title": "Security",
-      "changePassword": "Change Password",
       "currentPassword": "Current Password",
       "newPassword": "New Password",
       "confirmPassword": "Confirm Password",
       "updatePassword": "Update Password"
     },
-    "preferences": {
-      "title": "Preferences",
-      "emailNotifications": "Email Notifications",
-      "mobileNotifications": "Mobile Notifications"
-    },
     "buttons": {
-      "save": "Save Changes",
       "cancel": "Cancel"
-    },
-    "roles": {
-      "teacher": "Teacher",
-      "foodProvider": "Food Provider",
-      "admin": "Administrator"
     }
   },
   "Feedback": {
@@ -100,7 +70,6 @@
       "category": "Category",
       "subject": "Subject",
       "message": "Message",
-      "attachment": "Add Attachment",
       "submit": "Submit Feedback"
     },
     "categories": {
@@ -108,10 +77,6 @@
       "bug": "Bug Report",
       "feature": "Feature Request",
       "improvement": "Improvement"
-    },
-    "messages": {
-      "success": "Feedback submitted successfully",
-      "error": "Error submitting feedback"
     }
   },
   "Settings": {
@@ -201,63 +166,33 @@
   "Notifications": {
     "title": "Notifications",
     "noNotifications": "No new notifications",
-    "markAllRead": "Mark all as read",
-    "clearAll": "Clear all"
+    "markAllRead": "Mark all as read"
   },
   "Theme": {
-    "toggleDark": "Toggle dark mode",
-    "light": "Light",
-    "dark": "Dark",
-    "system": "System"
+    "toggleDark": "Toggle dark mode"
   },
   "Toast": {
     "success": {
       "title": "Success",
-      "settingsSaved": "Settings saved successfully",
-      "profileUpdated": "Profile updated successfully",
       "passwordChanged": "Password changed successfully",
       "feedbackSent": "Feedback sent successfully",
-      "idCopied": "ID copied to clipboard",
-      "reportGenerated": "Report generated successfully",
-      "reportDeleted": "Report deleted successfully",
-      "reportDownloaded": "Report downloaded successfully",
-      "menuItemAdded": "Menu item added successfully",
-      "menuItemUpdated": "Menu item updated successfully",
-      "menuItemDeleted": "Menu item deleted successfully"
+      "idCopied": "ID copied to clipboard"
     },
     "error": {
       "title": "Error",
       "generic": "An error occurred",
-      "settingsSaveFailed": "Failed to save settings",
-      "profileUpdateFailed": "Failed to update profile",
       "passwordChangeFailed": "Failed to change password",
       "feedbackFailed": "Failed to send feedback",
       "invalidInput": "Please check your input",
-      "idCopyFailed": "Failed to copy ID",
-      "reportGenerationFailed": "Failed to generate report",
-      "reportDeletionFailed": "Failed to delete report",
-      "reportDownloadFailed": "Failed to download report",
-      "menuItemAddFailed": "Failed to add menu item",
-      "menuItemUpdateFailed": "Failed to update menu item",
-      "menuItemDeleteFailed": "Failed to delete menu item"
-    },
-    "warning": {
-      "title": "Warning",
-      "unsavedChanges": "You have unsaved changes",
-      "sessionExpiring": "Your session will expire soon"
+      "idCopyFailed": "Failed to copy ID"
     },
     "info": {
       "title": "Information",
-      "dataLoading": "Loading data...",
-      "processingRequest": "Processing your request...",
-      "generatingReport": "Generating report...",
-      "downloadingReport": "Downloading report...",
-      "updatingMenu": "Updating menu..."
+      "dataLoading": "Loading data..."
     }
   },
   "MenuManagement": {
     "title": "Menu Management",
-    "description": "Manage your food menu items",
     "addItem": "Add Item",
     "editItem": "Edit Item",
     "deleteItem": "Delete Item",
@@ -266,7 +201,6 @@
       "price": "Price",
       "category": "Category",
       "description": "Description",
-      "available": "Available",
       "image": "Image",
       "noImage": "No image",
       "add": "Add Item",
@@ -280,10 +214,6 @@
       "pagination": "Page {current} of {total}"
     },
     "messages": {
-      "addSuccess": "Menu item added successfully",
-      "editSuccess": "Menu item updated successfully",
-      "deleteSuccess": "Menu item deleted successfully",
-      "error": "An error occurred",
       "deleteConfirm": "Are you sure you want to delete \"{name}\"? This action cannot be undone.",
       "noResults": "No menu items found matching your search.",
       "noData": "No menu items found. Add your first item using the button above."
@@ -297,51 +227,105 @@
     "title": "Reports",
     "description": "View and generate system reports",
     "filters": {
-      "dateRange": "Date Range",
-      "startDate": "Start Date",
-      "endDate": "End Date",
-      "type": "Report Type",
-      "status": "Status",
-      "apply": "Apply Filters",
       "year": "Year",
       "month": "Month",
       "week": "Week",
-      "day": "Day",
       "week_number": "Week {number}",
       "view": "View"
     },
     "types": {
-      "daily": "Daily Summary",
       "weekly": "Weekly Overview",
       "monthly": "Monthly Report",
-      "custom": "Custom Report",
       "aiPredictions": "AI Meal Predictions"
     },
     "meals": {
       "breakfast": "Breakfast",
       "lunch": "Lunch",
       "dinner": "Dinner"
+    }
+  },
+  "Admin": {
+    "title": "Admin Panel",
+    "description": "Manage user registration requests and system settings",
+    "tabs": {
+      "general": "General",
+      "requests": "Requests",
+      "testing": "Testing Dashboard"
+    },
+    "generalTab": {
+      "title": "General Administration",
+      "description": "Overview and general administrative controls",
+      "lastUpdated": "Last updated: {time}",
+      "errorFetchingMetrics": "Error fetching metrics data",
+      "noData": "No data available",
+      "sections": {
+        "orderTrends": "Order Trends",
+        "topItems": "Top Items",
+        "notifications": "Notifications"
+      },
+      "metrics": {
+        "totalUsers": "Total Users",
+        "teachers": "Teachers",
+        "foodProviders": "Food Providers",
+        "admins": "Administrators",
+        "averagePerDay": "Average Orders/Day",
+        "averagePerWeek": "Average Orders/Week",
+        "averagePerMonth": "Average Orders/Month",
+        "averageOrderValue": "Average Order Value",
+        "menuItems": "Menu Items",
+        "revenue": "Revenue",
+        "totalRevenue": "Total Revenue",
+        "orderCount": "Order Count",
+        "orderValue": "Order Value",
+        "totalItems": "Total Items",
+        "activeNotifications": "{count} active notifications",
+        "infoNotifications": "Info Notifications",
+        "warningNotifications": "Warning Notifications",
+        "errorNotifications": "Error Notifications",
+        "averageRevenuePerOrder": "Average Revenue Per Order",
+        "dailyRevenue": "Daily Revenue",
+        "monthlyRevenue": "Monthly Revenue"
+      },
+      "filters": {
+        "timeRange": "Time Range",
+        "year": "This Year",
+        "month": "This Month",
+        "all": "All Time",
+        "last30Days": "Last 30 Days",
+        "last90Days": "Last 90 Days",
+        "tryDifferentRange": "Try selecting a different time range"
+      }
+    },
+    "testingTab": {
+      "title": "Testing Dashboard",
+      "description": "Test and debug system features",
+      "endpoints": {
+        "title": "API Endpoints",
+        "name": "Endpoint",
+        "actions": "Actions",
+        "test": "Test"
+      },
+      "endpointTested": "Endpoint Tested",
+      "endpointWorking": "is working correctly",
+      "testFailed": "Test Failed",
+      "endpointError": "encountered an error"
     },
     "table": {
-      "date": "Date",
-      "type": "Type",
-      "status": "Status",
-      "items": "Items",
-      "total": "Total",
+      "email": "Email",
+      "username": "Username",
+      "role": "Role",
+      "requestDate": "Request Date",
       "actions": "Actions"
     },
     "actions": {
-      "view": "View Report",
-      "download": "Download",
-      "print": "Print",
-      "delete": "Delete"
+      "accept": "Accept"
     },
-    "status": {
-      "generated": "Generated",
-      "pending": "Pending",
-      "failed": "Failed"
-    },
-    "noData": "No reports available for the selected criteria",
-    "generateReport": "Generate Report"
+    "noRequests": "No pending registration requests",
+    "fetchError": "Error",
+    "errorFetchingRequests": "Failed to fetch registration requests",
+    "requestAccepted": "Request Accepted",
+    "userApproved": "User {email} has been approved",
+    "acceptError": "Error",
+    "errorAcceptingRequest": "Failed to accept registration request"
   }
-} 
+}

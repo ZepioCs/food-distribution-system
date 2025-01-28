@@ -1,347 +1,245 @@
 {
-    "Common": {
-      "appName": "FoodDist",
+  "Common": {
+    "appName": "FoodDist",
+    "loading": "Caricamento..."
+  },
+  "Navigation": {
+    "dashboard": "Cruscotto",
+    "reports": "Rapporti",
+    "menuManagement": "Gestione del Menu",
+    "analytics": "Analisi",
+    "profile": "Profilo",
+    "settings": "Impostazioni",
+    "feedback": "Feedback",
+    "logout": "Disconnettersi"
+  },
+  "Auth": {
+    "loginSuccess": "Accesso riuscito",
+    "welcomeBack": "Bentornato!",
+    "loginFailed": "Accesso fallito",
+    "verifyEmail": "Controlla la tua email per verificare il tuo account.",
+    "registrationFailed": "Registrazione fallita",
+    "passwordTooWeak": "Password troppo debole",
+    "passwordTooWeakDescription": "La password deve essere lunga almeno 6 caratteri",
+    "passwordIsTooWeak": "La password è troppo debole",
+    "passwordShouldBeAtLeastCharacters": "La password deve essere lunga almeno 6 caratteri",
+    "passwordShouldIncludeDifferentTypesOfCharacters": "La password deve includere diversi tipi di caratteri"
+  },
+  "Analytics": {
+    "title": "Analisi",
+    "description": "Visualizza e analizza i tuoi dati",
+    "noData": "Nessun dato disponibile",
+    "filters": {
+      "startDate": "Data di Inizio",
+      "endDate": "Data di Fine",
+      "apply": "Applica Filtri"
+    },
+    "metrics": {
+      "totalOrders": "Ordini Totali",
+      "averageOrderValue": "Valore Medio dell'Ordine"
+    },
+    "charts": {
+      "daily": "Ordini Giornalieri"
+    }
+  },
+  "Profile": {
+    "title": "Profilo",
+    "description": "Gestisci le informazioni del tuo account",
+    "personalInfo": {
+      "title": "Informazioni Personali",
+      "email": "Email",
+      "role": "Ruolo"
+    },
+    "security": {
+      "title": "Sicurezza",
+      "currentPassword": "Password Attuale",
+      "newPassword": "Nuova Password",
+      "confirmPassword": "Conferma Password",
+      "updatePassword": "Aggiorna Password"
+    },
+    "buttons": {
+      "cancel": "Annulla"
+    }
+  },
+  "Feedback": {
+    "title": "Feedback",
+    "description": "Condividi i tuoi pensieri e suggerimenti",
+    "form": {
+      "category": "Categoria",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "submit": "Invia Feedback"
+    },
+    "categories": {
+      "general": "Generale",
+      "bug": "Segnalazione di Bug",
+      "feature": "Richiesta di Funzione",
+      "improvement": "Miglioramento"
+    }
+  },
+  "Settings": {
+    "title": "Impostazioni",
+    "description": "Gestisci le preferenze della tua applicazione. Queste impostazioni sono salvate localmente sul tuo dispositivo.",
+    "theme": {
+      "label": "Tema",
+      "description": "Scegli il tuo tema di colore preferito",
+      "placeholder": "Seleziona tema",
+      "options": {
+        "light": "Chiaro",
+        "dark": "Scuro",
+        "system": "Sistema"
+      }
+    },
+    "language": {
+      "label": "Lingua",
+      "description": "Seleziona la tua lingua preferita"
+    },
+    "notifications": {
+      "label": "Notifiche",
+      "description": "Abilita o disabilita le notifiche di sistema"
+    },
+    "autoLogout": {
+      "label": "Logout Automatico",
+      "description": "Disconnetti automaticamente quando inattivo"
+    },
+    "tablePageSize": {
+      "label": "Elementi per pagina",
+      "description": "Numero di elementi da mostrare nelle tabelle",
+      "placeholder": "Seleziona dimensione pagina",
+      "options": {
+        "five": "5 elementi",
+        "ten": "10 elementi",
+        "twenty": "20 elementi",
+        "fifty": "50 elementi"
+      }
+    },
+    "reset": {
+      "button": "Ripristina predefiniti"
+    }
+  },
+  "EmployeeDashboard": {
+    "title": "Storico dei Pasti",
+    "search": {
+      "placeholder": "Cerca per articolo o prezzo...",
+      "noResults": "Nessuno storico dei pasti trovato che corrisponda alla tua ricerca.",
+      "noData": "Nessuno storico dei pasti trovato."
+    },
+    "table": {
+      "date": "Data",
+      "items": "Articoli",
+      "cost": "Costo",
+      "total": "Totale",
+      "page": "Pagina {page} di {total}"
+    },
+    "export": {
+      "title": "Esporta Storico dei Pasti",
+      "fromDate": "Esporta da (opzionale)",
+      "button": "Esporta in JSON"
+    }
+  },
+  "Login": {
+    "tabs": {
+      "login": "Accedi",
+      "register": "Registrati"
+    },
+    "form": {
+      "email": "Email",
+      "emailPlaceholder": "Inserisci la tua email",
+      "password": "Password",
+      "passwordPlaceholder": "Inserisci la tua password",
+      "username": "Nome Utente",
+      "usernamePlaceholder": "Scegli un nome utente",
+      "role": "Ruolo",
+      "rolePlaceholder": "Seleziona il tuo ruolo",
       "loading": "Caricamento...",
-      "error": {
-        "title": "Errore",
-        "unknown": "Si è verificato un errore sconosciuto"
-      },
-      "success": {
-        "title": "Successo"
-      }
+      "loginButton": "Accedi",
+      "registerButton": "Registrati"
     },
-    "Navigation": {
-      "dashboard": "Cruscotto",
-      "reports": "Rapporti",
-      "menuManagement": "Gestione del Menu",
-      "analytics": "Analisi",
-      "profile": "Profilo",
-      "settings": "Impostazioni",
-      "feedback": "Feedback",
-      "testDashboard": "Cruscotto di Test",
-      "logout": "Disconnettersi"
+    "roles": {
+      "teacher": "Insegnante",
+      "foodProvider": "Fornitore di Cibo",
+      "admin": "Amministratore"
+    }
+  },
+  "Notifications": {
+    "title": "Notifiche",
+    "noNotifications": "Nessuna nuova notifica",
+    "markAllRead": "Segna tutto come letto"
+  },
+  "Theme": {
+    "toggleDark": "Attiva modalità scura"
+  },
+  "Toast": {
+    "success": {
+      "title": "Successo",
+      "passwordChanged": "Password cambiata con successo",
+      "feedbackSent": "Feedback inviato con successo",
+      "idCopied": "ID copiato negli appunti"
     },
-    "Auth": {
-      "loginSuccess": "Accesso riuscito",
-      "welcomeBack": "Bentornato!",
-      "loginFailed": "Accesso fallito",
-      "registrationSuccess": "Registrazione riuscita",
-      "verifyEmail": "Controlla la tua email per verificare il tuo account.",
-      "registrationFailed": "Registrazione fallita",
-      "passwordTooWeak": "Password troppo debole",
-      "passwordTooWeakDescription": "La password deve essere lunga almeno 6 caratteri",
-      "passwordIsTooWeak": "La password è troppo debole",
-      "passwordShouldBeAtLeastCharacters": "La password deve essere lunga almeno 6 caratteri",
-      "passwordShouldIncludeDifferentTypesOfCharacters": "La password deve includere diversi tipi di caratteri",
-      "passwordRequirements": {
-        "length": "La password deve essere lunga almeno 6 caratteri",
-        "characters": "La password deve includere diversi tipi di caratteri"
-      }
+    "error": {
+      "title": "Errore",
+      "generic": "Si è verificato un errore",
+      "passwordChangeFailed": "Impossibile cambiare la password",
+      "feedbackFailed": "Impossibile inviare il feedback",
+      "invalidInput": "Controlla il tuo input",
+      "idCopyFailed": "Impossibile copiare l'ID"
     },
-    "Analytics": {
-      "title": "Analisi",
-      "description": "Visualizza e analizza i tuoi dati",
-      "noData": "Nessun dato disponibile",
-      "filters": {
-        "dateRange": "Intervallo di Date",
-        "startDate": "Data di Inizio",
-        "endDate": "Data di Fine",
-        "apply": "Applica Filtri"
-      },
-      "metrics": {
-        "totalOrders": "Ordini Totali",
-        "averageOrderValue": "Valore Medio dell'Ordine",
-        "topItems": "Articoli Principali",
-        "peakHours": "Ore di Punta"
-      },
-      "charts": {
-        "daily": "Ordini Giornalieri",
-        "weekly": "Tendenze Settimanali",
-        "monthly": "Panoramica Mensile"
-      }
+    "info": {
+      "title": "Informazioni",
+      "dataLoading": "Caricamento dati..."
+    }
+  },
+  "MenuManagement": {
+    "title": "Gestione del Menu",
+    "addItem": "Aggiungi Elemento",
+    "editItem": "Modifica Elemento",
+    "deleteItem": "Elimina Elemento",
+    "form": {
+      "name": "Nome dell'Elemento",
+      "price": "Prezzo",
+      "category": "Categoria",
+      "description": "Descrizione",
+      "image": "Immagine",
+      "noImage": "Nessuna immagine",
+      "add": "Aggiungi Elemento",
+      "save": "Salva Modifiche"
     },
-    "Profile": {
-      "title": "Profilo",
-      "description": "Gestisci le informazioni del tuo account",
-      "personalInfo": {
-        "title": "Informazioni Personali",
-        "name": "Nome",
-        "email": "Email",
-        "role": "Ruolo",
-        "phone": "Numero di Telefono"
-      },
-      "security": {
-        "title": "Sicurezza",
-        "changePassword": "Cambia Password",
-        "currentPassword": "Password Attuale",
-        "newPassword": "Nuova Password",
-        "confirmPassword": "Conferma Password",
-        "updatePassword": "Aggiorna Password"
-      },
-      "preferences": {
-        "title": "Preferenze",
-        "emailNotifications": "Notifiche Email",
-        "mobileNotifications": "Notifiche Mobili"
-      },
-      "buttons": {
-        "save": "Salva Modifiche",
-        "cancel": "Annulla"
-      },
-      "roles": {
-        "teacher": "Insegnante",
-        "foodProvider": "Fornitore di Cibo",
-        "admin": "Amministratore"
-      }
+    "table": {
+      "name": "Nome",
+      "price": "Prezzo",
+      "category": "Categoria",
+      "actions": "Azioni",
+      "pagination": "Pagina {current} di {total}"
     },
-    "Feedback": {
-      "title": "Feedback",
-      "description": "Condividi i tuoi pensieri e suggerimenti",
-      "form": {
-        "category": "Categoria",
-        "subject": "Oggetto",
-        "message": "Messaggio",
-        "attachment": "Aggiungi Allegato",
-        "submit": "Invia Feedback"
-      },
-      "categories": {
-        "general": "Generale",
-        "bug": "Segnalazione di Bug",
-        "feature": "Richiesta di Funzione",
-        "improvement": "Miglioramento"
-      },
-      "messages": {
-        "success": "Feedback inviato con successo",
-        "error": "Errore nell'invio del feedback"
-      }
+    "messages": {
+      "deleteConfirm": "Sei sicuro di voler eliminare \"{name}\"? Questa azione non può essere annullata.",
+      "noResults": "Nessun elemento del menu trovato che corrisponda alla tua ricerca.",
+      "noData": "Nessun elemento del menu trovato. Aggiungi il tuo primo elemento usando il pulsante sopra."
     },
-    "Settings": {
-      "title": "Impostazioni",
-      "description": "Gestisci le preferenze della tua applicazione. Queste impostazioni sono salvate localmente sul tuo dispositivo.",
-      "theme": {
-        "label": "Tema",
-        "description": "Scegli il tuo tema di colore preferito",
-        "placeholder": "Seleziona tema",
-        "options": {
-          "light": "Chiaro",
-          "dark": "Scuro",
-          "system": "Sistema"
-        }
-      },
-      "language": {
-        "label": "Lingua",
-        "description": "Seleziona la tua lingua preferita"
-      },
-      "notifications": {
-        "label": "Notifiche",
-        "description": "Abilita o disabilita le notifiche di sistema"
-      },
-      "autoLogout": {
-        "label": "Logout Automatico",
-        "description": "Disconnetti automaticamente quando inattivo"
-      },
-      "tablePageSize": {
-        "label": "Elementi per pagina",
-        "description": "Numero di elementi da mostrare nelle tabelle",
-        "placeholder": "Seleziona dimensione pagina",
-        "options": {
-          "five": "5 elementi",
-          "ten": "10 elementi",
-          "twenty": "20 elementi",
-          "fifty": "50 elementi"
-        }
-      },
-      "reset": {
-        "button": "Ripristina predefiniti"
-      }
+    "buttons": {
+      "cancel": "Annulla",
+      "delete": "Elimina"
+    }
+  },
+  "Reports": {
+    "title": "Rapporti",
+    "description": "Visualizza e genera rapporti di sistema",
+    "filters": {
+      "year": "Anno",
+      "month": "Mese",
+      "week": "Settimana",
+      "week_number": "Settimana {number}",
+      "view": "Visualizza"
     },
-    "EmployeeDashboard": {
-      "title": "Storico dei Pasti",
-      "search": {
-        "placeholder": "Cerca per articolo o prezzo...",
-        "noResults": "Nessuno storico dei pasti trovato che corrisponda alla tua ricerca.",
-        "noData": "Nessuno storico dei pasti trovato."
-      },
-      "table": {
-        "date": "Data",
-        "items": "Articoli",
-        "cost": "Costo",
-        "total": "Totale",
-        "page": "Pagina {page} di {total}"
-      },
-      "export": {
-        "title": "Esporta Storico dei Pasti",
-        "fromDate": "Esporta da (opzionale)",
-        "button": "Esporta in JSON"
-      }
+    "types": {
+      "weekly": "Panoramica Settimanale",
+      "monthly": "Rapporto Mensile",
+      "aiPredictions": "Previsioni AI per i Pasti"
     },
-    "Login": {
-      "tabs": {
-        "login": "Accedi",
-        "register": "Registrati"
-      },
-      "form": {
-        "email": "Email",
-        "emailPlaceholder": "Inserisci la tua email",
-        "password": "Password",
-        "passwordPlaceholder": "Inserisci la tua password",
-        "username": "Nome Utente",
-        "usernamePlaceholder": "Scegli un nome utente",
-        "role": "Ruolo",
-        "rolePlaceholder": "Seleziona il tuo ruolo",
-        "loading": "Caricamento...",
-        "loginButton": "Accedi",
-        "registerButton": "Registrati"
-      },
-      "roles": {
-        "teacher": "Insegnante",
-        "foodProvider": "Fornitore di Cibo",
-        "admin": "Amministratore"
-      }
-    },
-    "Notifications": {
-      "title": "Notifiche",
-      "noNotifications": "Nessuna nuova notifica",
-      "markAllRead": "Segna tutto come letto",
-      "clearAll": "Cancella tutto"
-    },
-    "Theme": {
-      "toggleDark": "Attiva modalità scura",
-      "light": "Chiaro",
-      "dark": "Scuro",
-      "system": "Sistema"
-    },
-    "Toast": {
-      "success": {
-        "title": "Successo",
-        "settingsSaved": "Impostazioni salvate con successo",
-        "profileUpdated": "Profilo aggiornato con successo",
-        "passwordChanged": "Password cambiata con successo",
-        "feedbackSent": "Feedback inviato con successo",
-        "idCopied": "ID copiato negli appunti",
-        "reportGenerated": "Rapporto generato con successo",
-        "reportDeleted": "Rapporto eliminato con successo",
-        "reportDownloaded": "Rapporto scaricato con successo",
-        "menuItemAdded": "Elemento del menu aggiunto con successo",
-        "menuItemUpdated": "Elemento del menu aggiornato con successo",
-        "menuItemDeleted": "Elemento del menu eliminato con successo"
-      },
-      "error": {
-        "title": "Errore",
-        "generic": "Si è verificato un errore",
-        "settingsSaveFailed": "Impossibile salvare le impostazioni",
-        "profileUpdateFailed": "Impossibile aggiornare il profilo",
-        "passwordChangeFailed": "Impossibile cambiare la password",
-        "feedbackFailed": "Impossibile inviare il feedback",
-        "invalidInput": "Controlla il tuo input",
-        "idCopyFailed": "Impossibile copiare l'ID",
-        "reportGenerationFailed": "Impossibile generare il rapporto",
-        "reportDeletionFailed": "Impossibile eliminare il rapporto",
-        "reportDownloadFailed": "Impossibile scaricare il rapporto",
-        "menuItemAddFailed": "Impossibile aggiungere l'elemento del menu",
-        "menuItemUpdateFailed": "Impossibile aggiornare l'elemento del menu",
-        "menuItemDeleteFailed": "Impossibile eliminare l'elemento del menu"
-      },
-      "warning": {
-        "title": "Avviso",
-        "unsavedChanges": "Hai modifiche non salvate",
-        "sessionExpiring": "La tua sessione scadrà presto"
-      },
-      "info": {
-        "title": "Informazioni",
-        "dataLoading": "Caricamento dati...",
-        "processingRequest": "Elaborazione della tua richiesta...",
-        "generatingReport": "Generazione del rapporto...",
-        "downloadingReport": "Download del rapporto...",
-        "updatingMenu": "Aggiornamento del menu..."
-      }
-    },
-    "MenuManagement": {
-      "title": "Gestione del Menu",
-      "description": "Gestisci gli elementi del tuo menu alimentare",
-      "addItem": "Aggiungi Elemento",
-      "editItem": "Modifica Elemento",
-      "deleteItem": "Elimina Elemento",
-      "form": {
-        "name": "Nome dell'Elemento",
-        "price": "Prezzo",
-        "category": "Categoria",
-        "description": "Descrizione",
-        "available": "Disponibile",
-        "image": "Immagine",
-        "noImage": "Nessuna immagine",
-        "add": "Aggiungi Elemento",
-        "save": "Salva Modifiche"
-      },
-      "table": {
-        "name": "Nome",
-        "price": "Prezzo",
-        "category": "Categoria",
-        "actions": "Azioni",
-        "pagination": "Pagina {current} di {total}"
-      },
-      "messages": {
-        "addSuccess": "Elemento del menu aggiunto con successo",
-        "editSuccess": "Elemento del menu aggiornato con successo",
-        "deleteSuccess": "Elemento del menu eliminato con successo",
-        "error": "Si è verificato un errore",
-        "deleteConfirm": "Sei sicuro di voler eliminare \"{name}\"? Questa azione non può essere annullata.",
-        "noResults": "Nessun elemento del menu trovato che corrisponda alla tua ricerca.",
-        "noData": "Nessun elemento del menu trovato. Aggiungi il tuo primo elemento usando il pulsante sopra."
-      },
-      "buttons": {
-        "cancel": "Annulla",
-        "delete": "Elimina"
-      }
-    },
-    "Reports": {
-      "title": "Rapporti",
-      "description": "Visualizza e genera rapporti di sistema",
-      "filters": {
-        "dateRange": "Intervallo di Date",
-        "startDate": "Data di Inizio",
-        "endDate": "Data di Fine",
-        "type": "Tipo di Rapporto",
-        "status": "Stato",
-        "apply": "Applica Filtri",
-        "year": "Anno",
-        "month": "Mese",
-        "week": "Settimana",
-        "day": "Giorno",
-        "week_number": "Settimana {number}",
-        "view": "Visualizza"
-      },
-      "types": {
-        "daily": "Riepilogo Giornaliero",
-        "weekly": "Panoramica Settimanale",
-        "monthly": "Rapporto Mensile",
-        "custom": "Rapporto Personalizzato",
-        "aiPredictions": "Previsioni AI per i Pasti"
-      },
-      "meals": {
-        "breakfast": "Colazione",
-        "lunch": "Pranzo",
-        "dinner": "Cena"
-      },
-      "table": {
-        "date": "Data",
-        "type": "Tipo",
-        "status": "Stato",
-        "items": "Elementi",
-        "total": "Totale",
-        "actions": "Azioni"
-      },
-      "actions": {
-        "view": "Visualizza Rapporto",
-        "download": "Scarica",
-        "print": "Stampa",
-        "delete": "Elimina"
-      },
-      "status": {
-        "generated": "Generato",
-        "pending": "In attesa",
-        "failed": "Fallito"
-      },
-      "noData": "Nessun rapporto disponibile per i criteri selezionati",
-      "generateReport": "Genera Rapporto"
+    "meals": {
+      "breakfast": "Colazione",
+      "lunch": "Pranzo",
+      "dinner": "Cena"
     }
   }
+}

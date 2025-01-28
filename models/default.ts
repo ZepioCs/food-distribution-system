@@ -71,5 +71,22 @@ enum EUserRole {
     ADMIN = "admin",
 }
 
+interface IFeedback {
+    id: number;
+    user_id: string;
+    message: string;
+    resolved: boolean;
+    created_at: string;
+}
+
+interface IRegisterRequest {
+    id: string;
+    email: string;
+    username: string;
+    role: string;
+    user_id: string;
+    created_at: string;
+}
+
 export { EUserRole }
-export type { IMeal, ICategory, IProfile, IOptions, IPrediction, IMealHistory, INotification };
+export type { IMeal, ICategory, IProfile, IOptions, IPrediction, IMealHistory, INotification, IFeedback, IRegisterRequest };

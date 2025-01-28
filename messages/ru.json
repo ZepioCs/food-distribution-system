@@ -1,347 +1,245 @@
 {
-    "Common": {
-      "appName": "FoodDist",
+  "Common": {
+    "appName": "FoodDist",
+    "loading": "Загрузка..."
+  },
+  "Navigation": {
+    "dashboard": "Панель управления",
+    "reports": "Отчеты",
+    "menuManagement": "Управление меню",
+    "analytics": "Аналитика",
+    "profile": "Профиль",
+    "settings": "Настройки",
+    "feedback": "Обратная связь",
+    "logout": "Выйти"
+  },
+  "Auth": {
+    "loginSuccess": "Вход выполнен успешно",
+    "welcomeBack": "С возвращением!",
+    "loginFailed": "Ошибка входа",
+    "verifyEmail": "Пожалуйста, проверьте свою электронную почту для подтверждения аккаунта.",
+    "registrationFailed": "Ошибка регистрации",
+    "passwordTooWeak": "Пароль слишком слабый",
+    "passwordTooWeakDescription": "Пароль должен быть не менее 6 символов",
+    "passwordIsTooWeak": "Пароль слишком слабый",
+    "passwordShouldBeAtLeastCharacters": "Пароль должен быть не менее 6 символов",
+    "passwordShouldIncludeDifferentTypesOfCharacters": "Пароль должен содержать различные типы символов"
+  },
+  "Analytics": {
+    "title": "Аналитика",
+    "description": "Просмотр и анализ данных",
+    "noData": "Нет доступных данных",
+    "filters": {
+      "startDate": "Дата начала",
+      "endDate": "Дата окончания",
+      "apply": "Применить фильтры"
+    },
+    "metrics": {
+      "totalOrders": "Всего заказов",
+      "averageOrderValue": "Средняя стоимость заказа"
+    },
+    "charts": {
+      "daily": "Ежедневные заказы"
+    }
+  },
+  "Profile": {
+    "title": "Профиль",
+    "description": "Управление информацией аккаунта",
+    "personalInfo": {
+      "title": "Личная информация",
+      "email": "Электронная почта",
+      "role": "Роль"
+    },
+    "security": {
+      "title": "Безопасность",
+      "currentPassword": "Текущий пароль",
+      "newPassword": "Новый пароль",
+      "confirmPassword": "Подтвердите пароль",
+      "updatePassword": "Обновить пароль"
+    },
+    "buttons": {
+      "cancel": "Отмена"
+    }
+  },
+  "Feedback": {
+    "title": "Обратная связь",
+    "description": "Поделитесь своими мыслями и предложениями",
+    "form": {
+      "category": "Категория",
+      "subject": "Тема",
+      "message": "Сообщение",
+      "submit": "Отправить отзыв"
+    },
+    "categories": {
+      "general": "Общее",
+      "bug": "Сообщение об ошибке",
+      "feature": "Запрос функции",
+      "improvement": "Улучшение"
+    }
+  },
+  "Settings": {
+    "title": "Настройки",
+    "description": "Управление предпочтениями приложения. Эти настройки сохраняются локально на вашем устройстве.",
+    "theme": {
+      "label": "Тема",
+      "description": "Выберите предпочитаемую цветовую тему",
+      "placeholder": "Выберите тему",
+      "options": {
+        "light": "Светлая",
+        "dark": "Темная",
+        "system": "Системная"
+      }
+    },
+    "language": {
+      "label": "Язык",
+      "description": "Выберите предпочитаемый язык"
+    },
+    "notifications": {
+      "label": "Уведомления",
+      "description": "Включить или отключить системные уведомления"
+    },
+    "autoLogout": {
+      "label": "Автоматический выход",
+      "description": "Автоматически выходить при бездействии"
+    },
+    "tablePageSize": {
+      "label": "Элементов на странице",
+      "description": "Количество элементов для отображения в таблицах",
+      "placeholder": "Выберите размер страницы",
+      "options": {
+        "five": "5 элементов",
+        "ten": "10 элементов",
+        "twenty": "20 элементов",
+        "fifty": "50 элементов"
+      }
+    },
+    "reset": {
+      "button": "Сбросить по умолчанию"
+    }
+  },
+  "EmployeeDashboard": {
+    "title": "История питания",
+    "search": {
+      "placeholder": "Поиск по товару или цене...",
+      "noResults": "История питания, соответствующая вашему запросу, не найдена.",
+      "noData": "История питания не найдена."
+    },
+    "table": {
+      "date": "Дата",
+      "items": "Товары",
+      "cost": "Стоимость",
+      "total": "Итого",
+      "page": "Страница {page} из {total}"
+    },
+    "export": {
+      "title": "Экспорт истории питания",
+      "fromDate": "Экспорт с (необязательно)",
+      "button": "Экспорт в JSON"
+    }
+  },
+  "Login": {
+    "tabs": {
+      "login": "Войти",
+      "register": "Регистрация"
+    },
+    "form": {
+      "email": "Электронная почта",
+      "emailPlaceholder": "Введите вашу электронную почту",
+      "password": "Пароль",
+      "passwordPlaceholder": "Введите ваш пароль",
+      "username": "Имя пользователя",
+      "usernamePlaceholder": "Выберите имя пользователя",
+      "role": "Роль",
+      "rolePlaceholder": "Выберите вашу роль",
       "loading": "Загрузка...",
-      "error": {
-        "title": "Ошибка",
-        "unknown": "Произошла неизвестная ошибка"
-      },
-      "success": {
-        "title": "Успех"
-      }
+      "loginButton": "Войти",
+      "registerButton": "Регистрация"
     },
-    "Navigation": {
-      "dashboard": "Панель управления",
-      "reports": "Отчеты",
-      "menuManagement": "Управление меню",
-      "analytics": "Аналитика",
-      "profile": "Профиль",
-      "settings": "Настройки",
-      "feedback": "Обратная связь",
-      "testDashboard": "Тестовая панель",
-      "logout": "Выйти"
+    "roles": {
+      "teacher": "Учитель",
+      "foodProvider": "Поставщик еды",
+      "admin": "Администратор"
+    }
+  },
+  "Notifications": {
+    "title": "Уведомления",
+    "noNotifications": "Новых уведомлений нет",
+    "markAllRead": "Отметить все как прочитанные"
+  },
+  "Theme": {
+    "toggleDark": "Переключить темный режим"
+  },
+  "Toast": {
+    "success": {
+      "title": "Успех",
+      "passwordChanged": "Пароль успешно изменен",
+      "feedbackSent": "Отзыв успешно отправлен",
+      "idCopied": "ID скопирован в буфер обмена"
     },
-    "Auth": {
-      "loginSuccess": "Вход выполнен успешно",
-      "welcomeBack": "С возвращением!",
-      "loginFailed": "Ошибка входа",
-      "registrationSuccess": "Регистрация прошла успешно",
-      "verifyEmail": "Пожалуйста, проверьте свою электронную почту для подтверждения аккаунта.",
-      "registrationFailed": "Ошибка регистрации",
-      "passwordTooWeak": "Пароль слишком слабый",
-      "passwordTooWeakDescription": "Пароль должен быть не менее 6 символов",
-      "passwordIsTooWeak": "Пароль слишком слабый",
-      "passwordShouldBeAtLeastCharacters": "Пароль должен быть не менее 6 символов",
-      "passwordShouldIncludeDifferentTypesOfCharacters": "Пароль должен содержать различные типы символов",
-      "passwordRequirements": {
-        "length": "Пароль должен быть не менее 6 символов",
-        "characters": "Пароль должен содержать различные типы символов"
-      }
+    "error": {
+      "title": "Ошибка",
+      "generic": "Произошла ошибка",
+      "passwordChangeFailed": "Не удалось изменить пароль",
+      "feedbackFailed": "Не удалось отправить отзыв",
+      "invalidInput": "Проверьте ваш ввод",
+      "idCopyFailed": "Не удалось скопировать ID"
     },
-    "Analytics": {
-      "title": "Аналитика",
-      "description": "Просмотр и анализ данных",
-      "noData": "Нет доступных данных",
-      "filters": {
-        "dateRange": "Диапазон дат",
-        "startDate": "Дата начала",
-        "endDate": "Дата окончания",
-        "apply": "Применить фильтры"
-      },
-      "metrics": {
-        "totalOrders": "Всего заказов",
-        "averageOrderValue": "Средняя стоимость заказа",
-        "topItems": "Популярные товары",
-        "peakHours": "Часы пик"
-      },
-      "charts": {
-        "daily": "Ежедневные заказы",
-        "weekly": "Еженедельные тренды",
-        "monthly": "Ежемесячный обзор"
-      }
+    "info": {
+      "title": "Информация",
+      "dataLoading": "Загрузка данных..."
+    }
+  },
+  "MenuManagement": {
+    "title": "Управление меню",
+    "addItem": "Добавить элемент",
+    "editItem": "Редактировать элемент",
+    "deleteItem": "Удалить элемент",
+    "form": {
+      "name": "Название элемента",
+      "price": "Цена",
+      "category": "Категория",
+      "description": "Описание",
+      "image": "Изображение",
+      "noImage": "Нет изображения",
+      "add": "Добавить элемент",
+      "save": "Сохранить изменения"
     },
-    "Profile": {
-      "title": "Профиль",
-      "description": "Управление информацией аккаунта",
-      "personalInfo": {
-        "title": "Личная информация",
-        "name": "Имя",
-        "email": "Электронная почта",
-        "role": "Роль",
-        "phone": "Номер телефона"
-      },
-      "security": {
-        "title": "Безопасность",
-        "changePassword": "Изменить пароль",
-        "currentPassword": "Текущий пароль",
-        "newPassword": "Новый пароль",
-        "confirmPassword": "Подтвердите пароль",
-        "updatePassword": "Обновить пароль"
-      },
-      "preferences": {
-        "title": "Предпочтения",
-        "emailNotifications": "Уведомления по электронной почте",
-        "mobileNotifications": "Мобильные уведомления"
-      },
-      "buttons": {
-        "save": "Сохранить изменения",
-        "cancel": "Отмена"
-      },
-      "roles": {
-        "teacher": "Учитель",
-        "foodProvider": "Поставщик еды",
-        "admin": "Администратор"
-      }
+    "table": {
+      "name": "Название",
+      "price": "Цена",
+      "category": "Категория",
+      "actions": "Действия",
+      "pagination": "Страница {current} из {total}"
     },
-    "Feedback": {
-      "title": "Обратная связь",
-      "description": "Поделитесь своими мыслями и предложениями",
-      "form": {
-        "category": "Категория",
-        "subject": "Тема",
-        "message": "Сообщение",
-        "attachment": "Добавить вложение",
-        "submit": "Отправить отзыв"
-      },
-      "categories": {
-        "general": "Общее",
-        "bug": "Сообщение об ошибке",
-        "feature": "Запрос функции",
-        "improvement": "Улучшение"
-      },
-      "messages": {
-        "success": "Отзыв успешно отправлен",
-        "error": "Ошибка отправки отзыва"
-      }
+    "messages": {
+      "deleteConfirm": "Вы уверены, что хотите удалить \"{name}\"? Это действие нельзя отменить.",
+      "noResults": "Элементы меню, соответствующие вашему запросу, не найдены.",
+      "noData": "Элементы меню не найдены. Добавьте первый элемент, используя кнопку выше."
     },
-    "Settings": {
-      "title": "Настройки",
-      "description": "Управление предпочтениями приложения. Эти настройки сохраняются локально на вашем устройстве.",
-      "theme": {
-        "label": "Тема",
-        "description": "Выберите предпочитаемую цветовую тему",
-        "placeholder": "Выберите тему",
-        "options": {
-          "light": "Светлая",
-          "dark": "Темная",
-          "system": "Системная"
-        }
-      },
-      "language": {
-        "label": "Язык",
-        "description": "Выберите предпочитаемый язык"
-      },
-      "notifications": {
-        "label": "Уведомления",
-        "description": "Включить или отключить системные уведомления"
-      },
-      "autoLogout": {
-        "label": "Автоматический выход",
-        "description": "Автоматически выходить при бездействии"
-      },
-      "tablePageSize": {
-        "label": "Элементов на странице",
-        "description": "Количество элементов для отображения в таблицах",
-        "placeholder": "Выберите размер страницы",
-        "options": {
-          "five": "5 элементов",
-          "ten": "10 элементов",
-          "twenty": "20 элементов",
-          "fifty": "50 элементов"
-        }
-      },
-      "reset": {
-        "button": "Сбросить по умолчанию"
-      }
+    "buttons": {
+      "cancel": "Отмена",
+      "delete": "Удалить"
+    }
+  },
+  "Reports": {
+    "title": "Отчеты",
+    "description": "Просмотр и создание системных отчетов",
+    "filters": {
+      "year": "Год",
+      "month": "Месяц",
+      "week": "Неделя",
+      "week_number": "Неделя {number}",
+      "view": "Просмотр"
     },
-    "EmployeeDashboard": {
-      "title": "История питания",
-      "search": {
-        "placeholder": "Поиск по товару или цене...",
-        "noResults": "История питания, соответствующая вашему запросу, не найдена.",
-        "noData": "История питания не найдена."
-      },
-      "table": {
-        "date": "Дата",
-        "items": "Товары",
-        "cost": "Стоимость",
-        "total": "Итого",
-        "page": "Страница {page} из {total}"
-      },
-      "export": {
-        "title": "Экспорт истории питания",
-        "fromDate": "Экспорт с (необязательно)",
-        "button": "Экспорт в JSON"
-      }
+    "types": {
+      "weekly": "Еженедельный обзор",
+      "monthly": "Ежемесячный отчет",
+      "aiPredictions": "Прогнозы AI для питания"
     },
-    "Login": {
-      "tabs": {
-        "login": "Войти",
-        "register": "Регистрация"
-      },
-      "form": {
-        "email": "Электронная почта",
-        "emailPlaceholder": "Введите вашу электронную почту",
-        "password": "Пароль",
-        "passwordPlaceholder": "Введите ваш пароль",
-        "username": "Имя пользователя",
-        "usernamePlaceholder": "Выберите имя пользователя",
-        "role": "Роль",
-        "rolePlaceholder": "Выберите вашу роль",
-        "loading": "Загрузка...",
-        "loginButton": "Войти",
-        "registerButton": "Регистрация"
-      },
-      "roles": {
-        "teacher": "Учитель",
-        "foodProvider": "Поставщик еды",
-        "admin": "Администратор"
-      }
-    },
-    "Notifications": {
-      "title": "Уведомления",
-      "noNotifications": "Новых уведомлений нет",
-      "markAllRead": "Отметить все как прочитанные",
-      "clearAll": "Очистить все"
-    },
-    "Theme": {
-      "toggleDark": "Переключить темный режим",
-      "light": "Светлая",
-      "dark": "Темная",
-      "system": "Системная"
-    },
-    "Toast": {
-      "success": {
-        "title": "Успех",
-        "settingsSaved": "Настройки успешно сохранены",
-        "profileUpdated": "Профиль успешно обновлен",
-        "passwordChanged": "Пароль успешно изменен",
-        "feedbackSent": "Отзыв успешно отправлен",
-        "idCopied": "ID скопирован в буфер обмена",
-        "reportGenerated": "Отчет успешно сгенерирован",
-        "reportDeleted": "Отчет успешно удален",
-        "reportDownloaded": "Отчет успешно загружен",
-        "menuItemAdded": "Элемент меню успешно добавлен",
-        "menuItemUpdated": "Элемент меню успешно обновлен",
-        "menuItemDeleted": "Элемент меню успешно удален"
-      },
-      "error": {
-        "title": "Ошибка",
-        "generic": "Произошла ошибка",
-        "settingsSaveFailed": "Не удалось сохранить настройки",
-        "profileUpdateFailed": "Не удалось обновить профиль",
-        "passwordChangeFailed": "Не удалось изменить пароль",
-        "feedbackFailed": "Не удалось отправить отзыв",
-        "invalidInput": "Проверьте ваш ввод",
-        "idCopyFailed": "Не удалось скопировать ID",
-        "reportGenerationFailed": "Не удалось сгенерировать отчет",
-        "reportDeletionFailed": "Не удалось удалить отчет",
-        "reportDownloadFailed": "Не удалось загрузить отчет",
-        "menuItemAddFailed": "Не удалось добавить элемент меню",
-        "menuItemUpdateFailed": "Не удалось обновить элемент меню",
-        "menuItemDeleteFailed": "Не удалось удалить элемент меню"
-      },
-      "warning": {
-        "title": "Предупреждение",
-        "unsavedChanges": "У вас есть несохраненные изменения",
-        "sessionExpiring": "Ваша сессия скоро истечет"
-      },
-      "info": {
-        "title": "Информация",
-        "dataLoading": "Загрузка данных...",
-        "processingRequest": "Обработка вашего запроса...",
-        "generatingReport": "Генерация отчета...",
-        "downloadingReport": "Загрузка отчета...",
-        "updatingMenu": "Обновление меню..."
-      }
-    },
-    "MenuManagement": {
-      "title": "Управление меню",
-      "description": "Управляйте элементами вашего меню",
-      "addItem": "Добавить элемент",
-      "editItem": "Редактировать элемент",
-      "deleteItem": "Удалить элемент",
-      "form": {
-        "name": "Название элемента",
-        "price": "Цена",
-        "category": "Категория",
-        "description": "Описание",
-        "available": "Доступно",
-        "image": "Изображение",
-        "noImage": "Нет изображения",
-        "add": "Добавить элемент",
-        "save": "Сохранить изменения"
-      },
-      "table": {
-        "name": "Название",
-        "price": "Цена",
-        "category": "Категория",
-        "actions": "Действия",
-        "pagination": "Страница {current} из {total}"
-      },
-      "messages": {
-        "addSuccess": "Элемент меню успешно добавлен",
-        "editSuccess": "Элемент меню успешно обновлен",
-        "deleteSuccess": "Элемент меню успешно удален",
-        "error": "Произошла ошибка",
-        "deleteConfirm": "Вы уверены, что хотите удалить \"{name}\"? Это действие нельзя отменить.",
-        "noResults": "Элементы меню, соответствующие вашему запросу, не найдены.",
-        "noData": "Элементы меню не найдены. Добавьте первый элемент, используя кнопку выше."
-      },
-      "buttons": {
-        "cancel": "Отмена",
-        "delete": "Удалить"
-      }
-    },
-    "Reports": {
-      "title": "Отчеты",
-      "description": "Просмотр и создание системных отчетов",
-      "filters": {
-        "dateRange": "Диапазон дат",
-        "startDate": "Дата начала",
-        "endDate": "Дата окончания",
-        "type": "Тип отчета",
-        "status": "Статус",
-        "apply": "Применить фильтры",
-        "year": "Год",
-        "month": "Месяц",
-        "week": "Неделя",
-        "day": "День",
-        "week_number": "Неделя {number}",
-        "view": "Просмотр"
-      },
-      "types": {
-        "daily": "Ежедневный отчет",
-        "weekly": "Еженедельный обзор",
-        "monthly": "Ежемесячный отчет",
-        "custom": "Пользовательский отчет",
-        "aiPredictions": "Прогнозы AI для питания"
-      },
-      "meals": {
-        "breakfast": "Завтрак",
-        "lunch": "Обед",
-        "dinner": "Ужин"
-      },
-      "table": {
-        "date": "Дата",
-        "type": "Тип",
-        "status": "Статус",
-        "items": "Элементы",
-        "total": "Итого",
-        "actions": "Действия"
-      },
-      "actions": {
-        "view": "Просмотр отчета",
-        "download": "Скачать",
-        "print": "Печать",
-        "delete": "Удалить"
-      },
-      "status": {
-        "generated": "Сгенерировано",
-        "pending": "В ожидании",
-        "failed": "Не удалось"
-      },
-      "noData": "Нет доступных отчетов для выбранных критериев",
-      "generateReport": "Создать отчет"
+    "meals": {
+      "breakfast": "Завтрак",
+      "lunch": "Обед",
+      "dinner": "Ужин"
     }
   }
+}
