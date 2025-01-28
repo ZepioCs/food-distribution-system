@@ -1,0 +1,343 @@
+{
+    "Common": {
+      "appName": "FoodDist",
+      "loading": "Cargando...",
+      "error": {
+        "title": "Error",
+        "unknown": "Ha ocurrido un error desconocido"
+      },
+      "success": {
+        "title": "Éxito"
+      }
+    },
+    "Navigation": {
+      "dashboard": "Panel de Control",
+      "reports": "Informes",
+      "menuManagement": "Gestión de Menú",
+      "analytics": "Análisis",
+      "profile": "Perfil",
+      "settings": "Configuración",
+      "feedback": "Comentarios",
+      "testDashboard": "Panel de Pruebas",
+      "logout": "Cerrar Sesión"
+    },
+    "Auth": {
+      "loginSuccess": "Inicio de sesión exitoso",
+      "welcomeBack": "¡Bienvenido de nuevo!",
+      "loginFailed": "Error de inicio de sesión",
+      "registrationSuccess": "Registro exitoso",
+      "verifyEmail": "Por favor, revise su correo electrónico para verificar su cuenta.",
+      "registrationFailed": "Error en el registro",
+      "passwordTooWeak": "Contraseña demasiado débil",
+      "passwordRequirements": {
+        "length": "La contraseña debe tener al menos 6 caracteres",
+        "characters": "La contraseña debe incluir diferentes tipos de caracteres"
+      }
+    },
+    "Analytics": {
+      "title": "Análisis",
+      "description": "Ver y analizar sus datos",
+      "noData": "No hay datos disponibles",
+      "filters": {
+        "dateRange": "Rango de Fechas",
+        "startDate": "Fecha de Inicio",
+        "endDate": "Fecha Final",
+        "apply": "Aplicar Filtros"
+      },
+      "metrics": {
+        "totalOrders": "Total de Pedidos",
+        "averageOrderValue": "Valor Promedio de Pedido",
+        "topItems": "Artículos Principales",
+        "peakHours": "Horas Pico"
+      },
+      "charts": {
+        "daily": "Pedidos Diarios",
+        "weekly": "Tendencias Semanales",
+        "monthly": "Resumen Mensual"
+      }
+    },
+    "Profile": {
+      "title": "Perfil",
+      "description": "Gestionar información de la cuenta",
+      "personalInfo": {
+        "title": "Información Personal",
+        "name": "Nombre",
+        "email": "Correo Electrónico",
+        "role": "Rol",
+        "phone": "Número de Teléfono"
+      },
+      "security": {
+        "title": "Seguridad",
+        "changePassword": "Cambiar Contraseña",
+        "currentPassword": "Contraseña Actual",
+        "newPassword": "Nueva Contraseña",
+        "confirmPassword": "Confirmar Contraseña",
+        "updatePassword": "Actualizar Contraseña"
+      },
+      "preferences": {
+        "title": "Preferencias",
+        "emailNotifications": "Notificaciones por Correo",
+        "mobileNotifications": "Notificaciones Móviles"
+      },
+      "buttons": {
+        "save": "Guardar Cambios",
+        "cancel": "Cancelar"
+      },
+      "roles": {
+        "teacher": "Profesor",
+        "foodProvider": "Proveedor de Alimentos",
+        "admin": "Administrador"
+      }
+    },
+    "Feedback": {
+      "title": "Comentarios",
+      "description": "Comparta sus pensamientos y sugerencias",
+      "form": {
+        "category": "Categoría",
+        "subject": "Asunto",
+        "message": "Mensaje",
+        "attachment": "Agregar Archivo Adjunto",
+        "submit": "Enviar Comentarios"
+      },
+      "categories": {
+        "general": "General",
+        "bug": "Reporte de Error",
+        "feature": "Solicitud de Función",
+        "improvement": "Mejora"
+      },
+      "messages": {
+        "success": "Comentarios enviados exitosamente",
+        "error": "Error al enviar comentarios"
+      }
+    },
+    "Settings": {
+      "title": "Configuración",
+      "description": "Administre sus preferencias de aplicación. Esta configuración se guarda localmente en su dispositivo.",
+      "theme": {
+        "label": "Tema",
+        "description": "Elija su tema de color preferido",
+        "placeholder": "Seleccionar tema",
+        "options": {
+          "light": "Claro",
+          "dark": "Oscuro",
+          "system": "Sistema"
+        }
+      },
+      "language": {
+        "label": "Idioma",
+        "description": "Seleccione su idioma preferido"
+      },
+      "notifications": {
+        "label": "Notificaciones",
+        "description": "Activar o desactivar notificaciones del sistema"
+      },
+      "autoLogout": {
+        "label": "Cierre de Sesión Automático",
+        "description": "Cerrar sesión automáticamente cuando esté inactivo"
+      },
+      "tablePageSize": {
+        "label": "Elementos por página",
+        "description": "Número de elementos a mostrar en tablas",
+        "placeholder": "Seleccionar tamaño de página",
+        "options": {
+          "five": "5 elementos",
+          "ten": "10 elementos",
+          "twenty": "20 elementos",
+          "fifty": "50 elementos"
+        }
+      },
+      "reset": {
+        "button": "Restablecer valores predeterminados"
+      }
+    },
+    "EmployeeDashboard": {
+      "title": "Historial de Comidas",
+      "search": {
+        "placeholder": "Buscar por artículo o precio...",
+        "noResults": "No se encontró historial de comidas que coincida con su búsqueda.",
+        "noData": "No se encontró historial de comidas."
+      },
+      "table": {
+        "date": "Fecha",
+        "items": "Artículos",
+        "cost": "Costo",
+        "total": "Total",
+        "page": "Página {page} de {total}"
+      },
+      "export": {
+        "title": "Exportar Historial de Comidas",
+        "fromDate": "Exportar desde (opcional)",
+        "button": "Exportar a JSON"
+      }
+    },
+    "Login": {
+      "tabs": {
+        "login": "Iniciar Sesión",
+        "register": "Registrarse"
+      },
+      "form": {
+        "email": "Correo Electrónico",
+        "emailPlaceholder": "Ingrese su correo electrónico",
+        "password": "Contraseña",
+        "passwordPlaceholder": "Ingrese su contraseña",
+        "username": "Nombre de Usuario",
+        "usernamePlaceholder": "Elija un nombre de usuario",
+        "role": "Rol",
+        "rolePlaceholder": "Seleccione su rol",
+        "loading": "Cargando...",
+        "loginButton": "Iniciar Sesión",
+        "registerButton": "Registrarse"
+      },
+      "roles": {
+        "teacher": "Profesor",
+        "foodProvider": "Proveedor de Alimentos",
+        "admin": "Administrador"
+      }
+    },
+    "Notifications": {
+      "title": "Notificaciones",
+      "noNotifications": "No hay nuevas notificaciones",
+      "markAllRead": "Marcar todo como leído",
+      "clearAll": "Borrar todo"
+    },
+    "Theme": {
+      "toggleDark": "Alternar modo oscuro",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    },
+    "Toast": {
+      "success": {
+        "title": "Éxito",
+        "settingsSaved": "Configuración guardada exitosamente",
+        "profileUpdated": "Perfil actualizado exitosamente",
+        "passwordChanged": "Contraseña cambiada exitosamente",
+        "feedbackSent": "Comentarios enviados exitosamente",
+        "idCopied": "ID copiado al portapapeles",
+        "reportGenerated": "Informe generado exitosamente",
+        "reportDeleted": "Informe eliminado exitosamente",
+        "reportDownloaded": "Informe descargado exitosamente",
+        "menuItemAdded": "Elemento del menú agregado exitosamente",
+        "menuItemUpdated": "Elemento del menú actualizado exitosamente",
+        "menuItemDeleted": "Elemento del menú eliminado exitosamente"
+      },
+      "error": {
+        "title": "Error",
+        "generic": "Ha ocurrido un error",
+        "settingsSaveFailed": "Error al guardar la configuración",
+        "profileUpdateFailed": "Error al actualizar el perfil",
+        "passwordChangeFailed": "Error al cambiar la contraseña",
+        "feedbackFailed": "Error al enviar comentarios",
+        "invalidInput": "Por favor, verifique su entrada",
+        "idCopyFailed": "Error al copiar ID",
+        "reportGenerationFailed": "Error al generar informe",
+        "reportDeletionFailed": "Error al eliminar informe",
+        "reportDownloadFailed": "Error al descargar informe",
+        "menuItemAddFailed": "Error al agregar elemento del menú",
+        "menuItemUpdateFailed": "Error al actualizar elemento del menú",
+        "menuItemDeleteFailed": "Error al eliminar elemento del menú"
+      },
+      "warning": {
+        "title": "Advertencia",
+        "unsavedChanges": "Tiene cambios sin guardar",
+        "sessionExpiring": "Su sesión expirará pronto"
+      },
+      "info": {
+        "title": "Información",
+        "dataLoading": "Cargando datos...",
+        "processingRequest": "Procesando su solicitud...",
+        "generatingReport": "Generando informe...",
+        "downloadingReport": "Descargando informe...",
+        "updatingMenu": "Actualizando menú..."
+      }
+    },
+    "MenuManagement": {
+      "title": "Gestión de Menú",
+      "description": "Gestionar elementos del menú de comidas",
+      "addItem": "Agregar Elemento",
+      "editItem": "Editar Elemento",
+      "deleteItem": "Eliminar Elemento",
+      "form": {
+        "name": "Nombre del Elemento",
+        "price": "Precio",
+        "category": "Categoría",
+        "description": "Descripción",
+        "available": "Disponible",
+        "image": "Imagen",
+        "noImage": "Sin imagen",
+        "add": "Agregar Elemento",
+        "save": "Guardar Cambios"
+      },
+      "table": {
+        "name": "Nombre",
+        "price": "Precio",
+        "category": "Categoría",
+        "actions": "Acciones",
+        "pagination": "Página {current} de {total}"
+      },
+      "messages": {
+        "addSuccess": "Elemento del menú agregado exitosamente",
+        "editSuccess": "Elemento del menú actualizado exitosamente",
+        "deleteSuccess": "Elemento del menú eliminado exitosamente",
+        "error": "Ha ocurrido un error",
+        "deleteConfirm": "¿Está seguro de que desea eliminar \"{name}\"? Esta acción no se puede deshacer.",
+        "noResults": "No se encontraron elementos del menú que coincidan con su búsqueda.",
+        "noData": "No se encontraron elementos del menú. Agregue su primer elemento usando el botón de arriba."
+      },
+      "buttons": {
+        "cancel": "Cancelar",
+        "delete": "Eliminar"
+      }
+    },
+    "Reports": {
+      "title": "Informes",
+      "description": "Ver y generar informes del sistema",
+      "filters": {
+        "dateRange": "Rango de Fechas",
+        "startDate": "Fecha de Inicio",
+        "endDate": "Fecha Final",
+        "type": "Tipo de Informe",
+        "status": "Estado",
+        "apply": "Aplicar Filtros",
+        "year": "Año",
+        "month": "Mes",
+        "week": "Semana",
+        "day": "Día",
+        "week_number": "Semana {number}",
+        "view": "Ver"
+      },
+      "types": {
+        "daily": "Resumen Diario",
+        "weekly": "Resumen Semanal",
+        "monthly": "Informe Mensual",
+        "custom": "Informe Personalizado",
+        "aiPredictions": "Predicciones de IA para Comidas"
+      },
+      "meals": {
+        "breakfast": "Desayuno",
+        "lunch": "Almuerzo",
+        "dinner": "Cena"
+      },
+      "table": {
+        "date": "Fecha",
+        "type": "Tipo",
+        "status": "Estado",
+        "items": "Elementos",
+        "total": "Total",
+        "actions": "Acciones"
+      },
+      "actions": {
+        "view": "Ver Informe",
+        "download": "Descargar",
+        "print": "Imprimir",
+        "delete": "Eliminar"
+      },
+      "status": {
+        "generated": "Generado",
+        "pending": "Pendiente",
+        "failed": "Fallido"
+      },
+      "noData": "No hay informes disponibles para los criterios seleccionados",
+      "generateReport": "Generar Informe"
+    }
+  }

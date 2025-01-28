@@ -1,0 +1,328 @@
+{
+  "Common": {
+    "appName": "FoodDist",
+    "loading": "Lädt...",
+    "error": {
+      "title": "Fehler",
+      "unknown": "Ein unbekannter Fehler ist aufgetreten"
+    },
+    "success": {
+      "title": "Erfolgreich"
+    }
+  },
+  "Toast": {
+    "success": {
+      "title": "Erfolgreich",
+      "settingsSaved": "Einstellungen erfolgreich gespeichert",
+      "profileUpdated": "Profil erfolgreich aktualisiert",
+      "passwordChanged": "Passwort erfolgreich geändert",
+      "feedbackSent": "Feedback erfolgreich gesendet",
+      "idCopied": "ID in die Zwischenablage kopiert"
+    },
+    "error": {
+      "title": "Fehler",
+      "generic": "Ein Fehler ist aufgetreten",
+      "settingsSaveFailed": "Speichern der Einstellungen fehlgeschlagen",
+      "profileUpdateFailed": "Aktualisierung des Profils fehlgeschlagen",
+      "passwordChangeFailed": "Änderung des Passworts fehlgeschlagen",
+      "feedbackFailed": "Senden des Feedbacks fehlgeschlagen",
+      "invalidInput": "Bitte überprüfen Sie Ihre Eingaben",
+      "idCopyFailed": "Fehler beim Kopieren der ID"
+    },
+    "warning": {
+      "title": "Warnung",
+      "unsavedChanges": "Sie haben ungespeicherte Änderungen",
+      "sessionExpiring": "Ihre Sitzung läuft bald ab"
+    },
+    "info": {
+      "title": "Information",
+      "dataLoading": "Daten werden geladen...",
+      "processingRequest": "Ihre Anfrage wird verarbeitet..."
+    }
+  },
+  "Navigation": {
+    "dashboard": "Dashboard",
+    "reports": "Berichte",
+    "menuManagement": "Menüverwaltung",
+    "analytics": "Analysen",
+    "profile": "Profil",
+    "settings": "Einstellungen",
+    "feedback": "Feedback",
+    "testDashboard": "Test-Dashboard",
+    "logout": "Abmelden"
+  },
+  "Auth": {
+    "loginSuccess": "Anmeldung erfolgreich",
+    "welcomeBack": "Willkommen zurück!",
+    "loginFailed": "Anmeldung fehlgeschlagen",
+    "registrationSuccess": "Registrierung erfolgreich",
+    "verifyEmail": "Bitte überprüfen Sie Ihre E-Mail zur Bestätigung.",
+    "registrationFailed": "Registrierung fehlgeschlagen",
+    "passwordTooWeak": "Passwort zu schwach",
+    "passwordRequirements": {
+      "length": "Das Passwort muss mindestens 6 Zeichen lang sein",
+      "characters": "Das Passwort sollte verschiedene Zeichenarten enthalten"
+    }
+  },
+  "Analytics": {
+    "title": "Analysen",
+    "description": "Daten anzeigen und analysieren",
+    "noData": "Keine Daten verfügbar",
+    "filters": {
+      "dateRange": "Datumsbereich",
+      "startDate": "Startdatum",
+      "endDate": "Enddatum",
+      "apply": "Filter anwenden"
+    },
+    "metrics": {
+      "totalOrders": "Gesamtbestellungen",
+      "averageOrderValue": "Durchschnittlicher Bestellwert",
+      "topItems": "Top Artikel",
+      "peakHours": "Hauptzeiten"
+    },
+    "charts": {
+      "daily": "Tägliche Bestellungen",
+      "weekly": "Wöchentliche Trends",
+      "monthly": "Monatliche Übersicht"
+    }
+  },
+  "Profile": {
+    "title": "Profil",
+    "description": "Verwalten Sie Ihre Kontoinformationen",
+    "personalInfo": {
+      "title": "Persönliche Informationen",
+      "name": "Name",
+      "email": "E-Mail",
+      "role": "Rolle",
+      "phone": "Telefonnummer"
+    },
+    "security": {
+      "title": "Sicherheit",
+      "changePassword": "Passwort ändern",
+      "currentPassword": "Aktuelles Passwort",
+      "newPassword": "Neues Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "updatePassword": "Passwort aktualisieren"
+    },
+    "preferences": {
+      "title": "Einstellungen",
+      "emailNotifications": "E-Mail-Benachrichtigungen",
+      "mobileNotifications": "Mobile Benachrichtigungen"
+    },
+    "buttons": {
+      "save": "Änderungen speichern",
+      "cancel": "Abbrechen"
+    },
+    "roles": {
+      "teacher": "Lehrer",
+      "foodProvider": "Essensanbieter",
+      "admin": "Administrator"
+    }
+  },
+  "Feedback": {
+    "title": "Feedback",
+    "description": "Teilen Sie Ihre Gedanken und Vorschläge",
+    "form": {
+      "category": "Kategorie",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "attachment": "Anhang hinzufügen",
+      "submit": "Feedback senden"
+    },
+    "categories": {
+      "general": "Allgemein",
+      "bug": "Fehlerbericht",
+      "feature": "Funktionswunsch",
+      "improvement": "Verbesserung"
+    },
+    "messages": {
+      "success": "Feedback erfolgreich gesendet",
+      "error": "Fehler beim Senden des Feedbacks"
+    }
+  },
+  "Settings": {
+    "title": "Einstellungen",
+    "description": "Verwalten Sie Ihre Anwendungseinstellungen. Diese Einstellungen werden lokal auf Ihrem Gerät gespeichert.",
+    "theme": {
+      "label": "Design",
+      "description": "Wählen Sie Ihr bevorzugtes Farbschema",
+      "placeholder": "Design auswählen",
+      "options": {
+        "light": "Hell",
+        "dark": "Dunkel",
+        "system": "System"
+      }
+    },
+    "language": {
+      "label": "Sprache",
+      "description": "Wählen Sie Ihre bevorzugte Sprache"
+    },
+    "notifications": {
+      "label": "Benachrichtigungen",
+      "description": "Systembenachrichtigungen aktivieren oder deaktivieren"
+    },
+    "autoLogout": {
+      "label": "Automatische Abmeldung",
+      "description": "Automatisch abmelden bei Inaktivität"
+    },
+    "tablePageSize": {
+      "label": "Einträge pro Seite",
+      "description": "Anzahl der Einträge in Tabellen",
+      "placeholder": "Seitengröße wählen",
+      "options": {
+        "five": "5 Einträge",
+        "ten": "10 Einträge",
+        "twenty": "20 Einträge",
+        "fifty": "50 Einträge"
+      }
+    },
+    "reset": {
+      "button": "Standard zurücksetzen"
+    }
+  },
+  "EmployeeDashboard": {
+    "title": "Mahlzeitenhistorie",
+    "search": {
+      "placeholder": "Nach Artikel oder Preis suchen...",
+      "noResults": "Keine Mahlzeitenhistorie für Ihre Suche gefunden.",
+      "noData": "Keine Mahlzeitenhistorie gefunden."
+    },
+    "table": {
+      "date": "Datum",
+      "items": "Artikel",
+      "cost": "Kosten",
+      "total": "Gesamt",
+      "page": "Seite {page} von {total}"
+    },
+    "export": {
+      "title": "Mahlzeitenhistorie exportieren",
+      "fromDate": "Exportieren ab (optional)",
+      "button": "Als JSON exportieren"
+    }
+  },
+  "Login": {
+    "tabs": {
+      "login": "Anmelden",
+      "register": "Registrieren"
+    },
+    "form": {
+      "email": "E-Mail",
+      "emailPlaceholder": "E-Mail eingeben",
+      "password": "Passwort",
+      "passwordPlaceholder": "Passwort eingeben",
+      "username": "Benutzername",
+      "usernamePlaceholder": "Benutzername wählen",
+      "role": "Rolle",
+      "rolePlaceholder": "Rolle auswählen",
+      "loading": "Lädt...",
+      "loginButton": "Anmelden",
+      "registerButton": "Registrieren"
+    },
+    "roles": {
+      "teacher": "Lehrer",
+      "foodProvider": "Essensanbieter",
+      "admin": "Administrator"
+    }
+  },
+  "Notifications": {
+    "title": "Benachrichtigungen",
+    "noNotifications": "Keine neuen Benachrichtigungen",
+    "markAllRead": "Alle als gelesen markieren",
+    "clearAll": "Alle löschen"
+  },
+  "Theme": {
+    "toggleDark": "Dunkelmodus umschalten",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "MenuManagement": {
+    "title": "Menüverwaltung",
+    "description": "Verwalten Sie Ihre Menüpunkte",
+    "addItem": "Artikel hinzufügen",
+    "editItem": "Artikel bearbeiten",
+    "deleteItem": "Artikel löschen",
+    "form": {
+      "name": "Artikelname",
+      "price": "Preis",
+      "category": "Kategorie",
+      "description": "Beschreibung",
+      "available": "Verfügbar",
+      "image": "Bild",
+      "noImage": "Kein Bild",
+      "add": "Artikel hinzufügen",
+      "save": "Änderungen speichern"
+    },
+    "table": {
+      "name": "Name",
+      "price": "Preis",
+      "category": "Kategorie",
+      "actions": "Aktionen",
+      "pagination": "Seite {current} von {total}"
+    },
+    "messages": {
+      "addSuccess": "Menüpunkt erfolgreich hinzugefügt",
+      "editSuccess": "Menüpunkt erfolgreich aktualisiert",
+      "deleteSuccess": "Menüpunkt erfolgreich gelöscht",
+      "error": "Ein Fehler ist aufgetreten",
+      "deleteConfirm": "Sind Sie sicher, dass Sie \"{name}\" löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "noResults": "Keine Menüpunkte für Ihre Suche gefunden.",
+      "noData": "Keine Menüpunkte gefunden. Fügen Sie Ihren ersten Artikel über die Schaltfläche oben hinzu."
+    },
+    "buttons": {
+      "cancel": "Abbrechen",
+      "delete": "Löschen"
+    }
+  },
+  "Reports": {
+    "title": "Berichte",
+    "description": "Systemreporte anzeigen und erstellen",
+    "filters": {
+      "dateRange": "Datumsbereich",
+      "startDate": "Startdatum",
+      "endDate": "Enddatum",
+      "type": "Berichtstyp",
+      "status": "Status",
+      "apply": "Filter anwenden",
+      "year": "Jahr",
+      "month": "Monat",
+      "week": "Woche",
+      "day": "Tag",
+      "week_number": "Woche {number}",
+      "view": "Ansicht"
+    },
+    "types": {
+      "daily": "Tageszusammenfassung",
+      "weekly": "Wochenübersicht",
+      "monthly": "Monatsbericht",
+      "custom": "Benutzerdefinierter Bericht",
+      "aiPredictions": "KI-Mahlzeitenprognosen"
+    },
+    "meals": {
+      "breakfast": "Frühstück",
+      "lunch": "Mittagessen",
+      "dinner": "Abendessen"
+    },
+    "table": {
+      "date": "Datum",
+      "type": "Typ",
+      "status": "Status",
+      "items": "Artikel",
+      "total": "Gesamt",
+      "actions": "Aktionen"
+    },
+    "actions": {
+      "view": "Bericht anzeigen",
+      "download": "Herunterladen",
+      "print": "Drucken",
+      "delete": "Löschen"
+    },
+    "status": {
+      "generated": "Erstellt",
+      "pending": "In Bearbeitung",
+      "failed": "Fehlgeschlagen"
+    },
+    "noData": "Keine Berichte für die ausgewählten Kriterien verfügbar",
+    "generateReport": "Bericht erstellen"
+  }
+} 

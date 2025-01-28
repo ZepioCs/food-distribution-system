@@ -1,0 +1,343 @@
+{
+  "Common": {
+    "appName": "FoodDist",
+    "loading": "Loading...",
+    "error": {
+      "title": "Error",
+      "unknown": "An unknown error occurred"
+    },
+    "success": {
+      "title": "Success"
+    }
+  },
+  "Navigation": {
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "menuManagement": "Menu Management",
+    "analytics": "Analytics",
+    "profile": "Profile",
+    "settings": "Settings",
+    "feedback": "Feedback",
+    "testDashboard": "Test Dashboard",
+    "logout": "Logout"
+  },
+  "Auth": {
+    "loginSuccess": "Login successful",
+    "welcomeBack": "Welcome back!",
+    "loginFailed": "Login failed",
+    "registrationSuccess": "Registration successful",
+    "verifyEmail": "Please check your email to verify your account.",
+    "registrationFailed": "Registration failed",
+    "passwordTooWeak": "Password too weak",
+    "passwordRequirements": {
+      "length": "Password should be at least 6 characters long",
+      "characters": "Password should include different types of characters"
+    }
+  },
+  "Analytics": {
+    "title": "Analytics",
+    "description": "View and analyze your data",
+    "noData": "No data available",
+    "filters": {
+      "dateRange": "Date Range",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "apply": "Apply Filters"
+    },
+    "metrics": {
+      "totalOrders": "Total Orders",
+      "averageOrderValue": "Average Order Value",
+      "topItems": "Top Items",
+      "peakHours": "Peak Hours"
+    },
+    "charts": {
+      "daily": "Daily Orders",
+      "weekly": "Weekly Trends",
+      "monthly": "Monthly Overview"
+    }
+  },
+  "Profile": {
+    "title": "Profile",
+    "description": "Manage your account information",
+    "personalInfo": {
+      "title": "Personal Information",
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "phone": "Phone Number"
+    },
+    "security": {
+      "title": "Security",
+      "changePassword": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "updatePassword": "Update Password"
+    },
+    "preferences": {
+      "title": "Preferences",
+      "emailNotifications": "Email Notifications",
+      "mobileNotifications": "Mobile Notifications"
+    },
+    "buttons": {
+      "save": "Save Changes",
+      "cancel": "Cancel"
+    },
+    "roles": {
+      "teacher": "Teacher",
+      "foodProvider": "Food Provider",
+      "admin": "Administrator"
+    }
+  },
+  "Feedback": {
+    "title": "Feedback",
+    "description": "Share your thoughts and suggestions",
+    "form": {
+      "category": "Category",
+      "subject": "Subject",
+      "message": "Message",
+      "attachment": "Add Attachment",
+      "submit": "Submit Feedback"
+    },
+    "categories": {
+      "general": "General",
+      "bug": "Bug Report",
+      "feature": "Feature Request",
+      "improvement": "Improvement"
+    },
+    "messages": {
+      "success": "Feedback submitted successfully",
+      "error": "Error submitting feedback"
+    }
+  },
+  "Settings": {
+    "title": "Settings",
+    "description": "Manage your application preferences. These settings are saved locally on your device.",
+    "theme": {
+      "label": "Theme",
+      "description": "Choose your preferred color theme",
+      "placeholder": "Select theme",
+      "options": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      }
+    },
+    "language": {
+      "label": "Language",
+      "description": "Select your preferred language"
+    },
+    "notifications": {
+      "label": "Notifications",
+      "description": "Enable or disable system notifications"
+    },
+    "autoLogout": {
+      "label": "Auto Logout",
+      "description": "Automatically log out when inactive"
+    },
+    "tablePageSize": {
+      "label": "Items per page",
+      "description": "Number of items to show in tables",
+      "placeholder": "Select page size",
+      "options": {
+        "five": "5 items",
+        "ten": "10 items",
+        "twenty": "20 items",
+        "fifty": "50 items"
+      }
+    },
+    "reset": {
+      "button": "Reset to default"
+    }
+  },
+  "EmployeeDashboard": {
+    "title": "Meal History",
+    "search": {
+      "placeholder": "Search by item or price...",
+      "noResults": "No meal history found matching your search.",
+      "noData": "No meal history found."
+    },
+    "table": {
+      "date": "Date",
+      "items": "Items",
+      "cost": "Cost",
+      "total": "Total",
+      "page": "Page {page} of {total}"
+    },
+    "export": {
+      "title": "Export Meal History",
+      "fromDate": "Export from (optional)",
+      "button": "Export to JSON"
+    }
+  },
+  "Login": {
+    "tabs": {
+      "login": "Login",
+      "register": "Register"
+    },
+    "form": {
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "username": "Username",
+      "usernamePlaceholder": "Choose a username",
+      "role": "Role",
+      "rolePlaceholder": "Select your role",
+      "loading": "Loading...",
+      "loginButton": "Login",
+      "registerButton": "Register"
+    },
+    "roles": {
+      "teacher": "Teacher",
+      "foodProvider": "Food Provider",
+      "admin": "Administrator"
+    }
+  },
+  "Notifications": {
+    "title": "Notifications",
+    "noNotifications": "No new notifications",
+    "markAllRead": "Mark all as read",
+    "clearAll": "Clear all"
+  },
+  "Theme": {
+    "toggleDark": "Toggle dark mode",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Toast": {
+    "success": {
+      "title": "Success",
+      "settingsSaved": "Settings saved successfully",
+      "profileUpdated": "Profile updated successfully",
+      "passwordChanged": "Password changed successfully",
+      "feedbackSent": "Feedback sent successfully",
+      "idCopied": "ID copied to clipboard",
+      "reportGenerated": "Report generated successfully",
+      "reportDeleted": "Report deleted successfully",
+      "reportDownloaded": "Report downloaded successfully",
+      "menuItemAdded": "Menu item added successfully",
+      "menuItemUpdated": "Menu item updated successfully",
+      "menuItemDeleted": "Menu item deleted successfully"
+    },
+    "error": {
+      "title": "Error",
+      "generic": "An error occurred",
+      "settingsSaveFailed": "Failed to save settings",
+      "profileUpdateFailed": "Failed to update profile",
+      "passwordChangeFailed": "Failed to change password",
+      "feedbackFailed": "Failed to send feedback",
+      "invalidInput": "Please check your input",
+      "idCopyFailed": "Failed to copy ID",
+      "reportGenerationFailed": "Failed to generate report",
+      "reportDeletionFailed": "Failed to delete report",
+      "reportDownloadFailed": "Failed to download report",
+      "menuItemAddFailed": "Failed to add menu item",
+      "menuItemUpdateFailed": "Failed to update menu item",
+      "menuItemDeleteFailed": "Failed to delete menu item"
+    },
+    "warning": {
+      "title": "Warning",
+      "unsavedChanges": "You have unsaved changes",
+      "sessionExpiring": "Your session will expire soon"
+    },
+    "info": {
+      "title": "Information",
+      "dataLoading": "Loading data...",
+      "processingRequest": "Processing your request...",
+      "generatingReport": "Generating report...",
+      "downloadingReport": "Downloading report...",
+      "updatingMenu": "Updating menu..."
+    }
+  },
+  "MenuManagement": {
+    "title": "Menu Management",
+    "description": "Manage your food menu items",
+    "addItem": "Add Item",
+    "editItem": "Edit Item",
+    "deleteItem": "Delete Item",
+    "form": {
+      "name": "Item Name",
+      "price": "Price",
+      "category": "Category",
+      "description": "Description",
+      "available": "Available",
+      "image": "Image",
+      "noImage": "No image",
+      "add": "Add Item",
+      "save": "Save Changes"
+    },
+    "table": {
+      "name": "Name",
+      "price": "Price",
+      "category": "Category",
+      "actions": "Actions",
+      "pagination": "Page {current} of {total}"
+    },
+    "messages": {
+      "addSuccess": "Menu item added successfully",
+      "editSuccess": "Menu item updated successfully",
+      "deleteSuccess": "Menu item deleted successfully",
+      "error": "An error occurred",
+      "deleteConfirm": "Are you sure you want to delete \"{name}\"? This action cannot be undone.",
+      "noResults": "No menu items found matching your search.",
+      "noData": "No menu items found. Add your first item using the button above."
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+  "Reports": {
+    "title": "Reports",
+    "description": "View and generate system reports",
+    "filters": {
+      "dateRange": "Date Range",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "type": "Report Type",
+      "status": "Status",
+      "apply": "Apply Filters",
+      "year": "Year",
+      "month": "Month",
+      "week": "Week",
+      "day": "Day",
+      "week_number": "Week {number}",
+      "view": "View"
+    },
+    "types": {
+      "daily": "Daily Summary",
+      "weekly": "Weekly Overview",
+      "monthly": "Monthly Report",
+      "custom": "Custom Report",
+      "aiPredictions": "AI Meal Predictions"
+    },
+    "meals": {
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner"
+    },
+    "table": {
+      "date": "Date",
+      "type": "Type",
+      "status": "Status",
+      "items": "Items",
+      "total": "Total",
+      "actions": "Actions"
+    },
+    "actions": {
+      "view": "View Report",
+      "download": "Download",
+      "print": "Print",
+      "delete": "Delete"
+    },
+    "status": {
+      "generated": "Generated",
+      "pending": "Pending",
+      "failed": "Failed"
+    },
+    "noData": "No reports available for the selected criteria",
+    "generateReport": "Generate Report"
+  }
+} 
