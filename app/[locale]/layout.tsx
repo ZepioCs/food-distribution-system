@@ -12,11 +12,15 @@ export const metadata = {
   description: "Streamline your food distribution operations with FoodDist. Manage menus, track orders, and analyze data efficiently.",
   keywords: "food distribution, menu management, order tracking, analytics, FoodDist",
   author: "ZepioCS GmbH",
-  viewport: "width=device-width, initial-scale=1",
   charset: "UTF-8",
   icons: {
     icon: "/favicon.ico"
   }
+}
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1
 }
 
 async function getMessages(locale: string) {
