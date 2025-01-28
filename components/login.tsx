@@ -76,13 +76,9 @@ const Login = observer(() => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-  
-    console.log("Starting registration...")
-    console.log("Password length:", registerPassword.length)
-  
+
     try {
       if (registerPassword.length < 6) {
-        console.log("Password too short, showing toast")
         toast({
           title: tAuth('passwordTooWeak'),
           description: tAuth('passwordTooWeakDescription'),
@@ -91,18 +87,45 @@ const Login = observer(() => {
         setIsLoading(false)
         return
       }
-  
-      await authService.register({
+
+      // Register with Supabase Auth
+      const { user, session } = await authService.register({
         email: registerEmail,
         password: registerPassword,
         username: registerUsername,
         role: registerRole as EUserRole,
       })
-      
-      toast({
-        title: tAuth('registrationSuccessful'),
-        description: tAuth('verifyEmail'),
-      })
+
+      if (!user) throw new Error('Registration failed')
+
+      // For teachers, create profile directly
+      // For other roles, create a register request
+      if (registerRole === EUserRole.TEACHER) {
+        await dbService.updateProfile(user.id, {
+          user_id: user.id,
+          email: registerEmail,
+          username: registerUsername,
+          role: EUserRole.TEACHER
+        })
+
+        toast({
+          title: tAuth('registrationSuccessful'),
+          description: tAuth('verifyEmail'),
+        })
+      } else {
+        // Create a register request for admin approval
+        await dbService.createRegisterRequest({
+          user_id: user.id,
+          email: registerEmail,
+          username: registerUsername,
+          role: registerRole
+        })
+
+        toast({
+          title: tAuth('registrationSuccessful'),
+          description: tAuth('awaitingApproval'),
+        })
+      }
     } catch (error: any) {
       let errorMessage = tAuth('registrationFailed')
       
@@ -127,7 +150,7 @@ const Login = observer(() => {
           errorMessage = error.message
         }
       }
-  
+
       toast({
         title: tAuth('registrationFailed'),
         description: errorMessage,

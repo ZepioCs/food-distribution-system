@@ -1,20 +1,11 @@
 {
   "Common": {
     "appName": "FoodDist",
-    "loading": "Lädt...",
-    "error": {
-      "title": "Fehler",
-      "unknown": "Ein unbekannter Fehler ist aufgetreten"
-    },
-    "success": {
-      "title": "Erfolgreich"
-    }
+    "loading": "Lädt..."
   },
   "Toast": {
     "success": {
       "title": "Erfolgreich",
-      "settingsSaved": "Einstellungen erfolgreich gespeichert",
-      "profileUpdated": "Profil erfolgreich aktualisiert",
       "passwordChanged": "Passwort erfolgreich geändert",
       "feedbackSent": "Feedback erfolgreich gesendet",
       "idCopied": "ID in die Zwischenablage kopiert"
@@ -22,22 +13,14 @@
     "error": {
       "title": "Fehler",
       "generic": "Ein Fehler ist aufgetreten",
-      "settingsSaveFailed": "Speichern der Einstellungen fehlgeschlagen",
-      "profileUpdateFailed": "Aktualisierung des Profils fehlgeschlagen",
       "passwordChangeFailed": "Änderung des Passworts fehlgeschlagen",
       "feedbackFailed": "Senden des Feedbacks fehlgeschlagen",
       "invalidInput": "Bitte überprüfen Sie Ihre Eingaben",
       "idCopyFailed": "Fehler beim Kopieren der ID"
     },
-    "warning": {
-      "title": "Warnung",
-      "unsavedChanges": "Sie haben ungespeicherte Änderungen",
-      "sessionExpiring": "Ihre Sitzung läuft bald ab"
-    },
     "info": {
       "title": "Information",
-      "dataLoading": "Daten werden geladen...",
-      "processingRequest": "Ihre Anfrage wird verarbeitet..."
+      "dataLoading": "Daten werden geladen..."
     }
   },
   "Navigation": {
@@ -48,44 +31,33 @@
     "profile": "Profil",
     "settings": "Einstellungen",
     "feedback": "Feedback",
-    "testDashboard": "Test-Dashboard",
     "logout": "Abmelden"
   },
   "Auth": {
     "loginSuccess": "Anmeldung erfolgreich",
     "welcomeBack": "Willkommen zurück!",
     "loginFailed": "Anmeldung fehlgeschlagen",
-    "registrationSuccess": "Registrierung erfolgreich",
     "registrationFailed": "Registrierung fehlgeschlagen",
     "verifyEmail": "Bitte überprüfen Sie Ihre E-Mail zur Bestätigung.",
     "registrationSuccessful": "Registrierung erfolgreich",
     "passwordTooWeak": "Passwort zu schwach",
-    "passwordTooWeakDescription": "Das Passwort muss mindestens 6 Zeichen lang sein",
-    "passwordRequirements": {
-      "length": "Das Passwort muss mindestens 6 Zeichen lang sein",
-      "characters": "Das Passwort sollte verschiedene Zeichenarten enthalten"
-    }
+    "passwordTooWeakDescription": "Das Passwort muss mindestens 6 Zeichen lang sein"
   },
   "Analytics": {
     "title": "Analysen",
     "description": "Daten anzeigen und analysieren",
     "noData": "Keine Daten verfügbar",
     "filters": {
-      "dateRange": "Datumsbereich",
       "startDate": "Startdatum",
       "endDate": "Enddatum",
       "apply": "Filter anwenden"
     },
     "metrics": {
       "totalOrders": "Gesamtbestellungen",
-      "averageOrderValue": "Durchschnittlicher Bestellwert",
-      "topItems": "Top Artikel",
-      "peakHours": "Hauptzeiten"
+      "averageOrderValue": "Durchschnittlicher Bestellwert"
     },
     "charts": {
-      "daily": "Tägliche Bestellungen",
-      "weekly": "Wöchentliche Trends",
-      "monthly": "Monatliche Übersicht"
+      "daily": "Tägliche Bestellungen"
     }
   },
   "Profile": {
@@ -93,32 +65,18 @@
     "description": "Verwalten Sie Ihre Kontoinformationen",
     "personalInfo": {
       "title": "Persönliche Informationen",
-      "name": "Name",
       "email": "E-Mail",
-      "role": "Rolle",
-      "phone": "Telefonnummer"
+      "role": "Rolle"
     },
     "security": {
       "title": "Sicherheit",
-      "changePassword": "Passwort ändern",
       "currentPassword": "Aktuelles Passwort",
       "newPassword": "Neues Passwort",
       "confirmPassword": "Passwort bestätigen",
       "updatePassword": "Passwort aktualisieren"
     },
-    "preferences": {
-      "title": "Einstellungen",
-      "emailNotifications": "E-Mail-Benachrichtigungen",
-      "mobileNotifications": "Mobile Benachrichtigungen"
-    },
     "buttons": {
-      "save": "Änderungen speichern",
       "cancel": "Abbrechen"
-    },
-    "roles": {
-      "teacher": "Lehrer",
-      "foodProvider": "Essensanbieter",
-      "admin": "Administrator"
     }
   },
   "Feedback": {
@@ -128,7 +86,6 @@
       "category": "Kategorie",
       "subject": "Betreff",
       "message": "Nachricht",
-      "attachment": "Anhang hinzufügen",
       "submit": "Feedback senden"
     },
     "categories": {
@@ -136,10 +93,6 @@
       "bug": "Fehlerbericht",
       "feature": "Funktionswunsch",
       "improvement": "Verbesserung"
-    },
-    "messages": {
-      "success": "Feedback erfolgreich gesendet",
-      "error": "Fehler beim Senden des Feedbacks"
     }
   },
   "Settings": {
@@ -229,18 +182,13 @@
   "Notifications": {
     "title": "Benachrichtigungen",
     "noNotifications": "Keine neuen Benachrichtigungen",
-    "markAllRead": "Alle als gelesen markieren",
-    "clearAll": "Alle löschen"
+    "markAllRead": "Alle als gelesen markieren"
   },
   "Theme": {
-    "toggleDark": "Dunkelmodus umschalten",
-    "light": "Hell",
-    "dark": "Dunkel",
-    "system": "System"
+    "toggleDark": "Dunkelmodus umschalten"
   },
   "MenuManagement": {
     "title": "Menüverwaltung",
-    "description": "Verwalten Sie Ihre Menüpunkte",
     "addItem": "Artikel hinzufügen",
     "editItem": "Artikel bearbeiten",
     "deleteItem": "Artikel löschen",
@@ -249,7 +197,6 @@
       "price": "Preis",
       "category": "Kategorie",
       "description": "Beschreibung",
-      "available": "Verfügbar",
       "image": "Bild",
       "noImage": "Kein Bild",
       "add": "Artikel hinzufügen",
@@ -263,10 +210,6 @@
       "pagination": "Seite {current} von {total}"
     },
     "messages": {
-      "addSuccess": "Menüpunkt erfolgreich hinzugefügt",
-      "editSuccess": "Menüpunkt erfolgreich aktualisiert",
-      "deleteSuccess": "Menüpunkt erfolgreich gelöscht",
-      "error": "Ein Fehler ist aufgetreten",
       "deleteConfirm": "Sind Sie sicher, dass Sie \"{name}\" löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
       "noResults": "Keine Menüpunkte für Ihre Suche gefunden.",
       "noData": "Keine Menüpunkte gefunden. Fügen Sie Ihren ersten Artikel über die Schaltfläche oben hinzu."
@@ -280,51 +223,21 @@
     "title": "Berichte",
     "description": "Systemreporte anzeigen und erstellen",
     "filters": {
-      "dateRange": "Datumsbereich",
-      "startDate": "Startdatum",
-      "endDate": "Enddatum",
-      "type": "Berichtstyp",
-      "status": "Status",
-      "apply": "Filter anwenden",
       "year": "Jahr",
       "month": "Monat",
       "week": "Woche",
-      "day": "Tag",
       "week_number": "Woche {number}",
       "view": "Ansicht"
     },
     "types": {
-      "daily": "Tageszusammenfassung",
       "weekly": "Wochenübersicht",
       "monthly": "Monatsbericht",
-      "custom": "Benutzerdefinierter Bericht",
       "aiPredictions": "KI-Mahlzeitenprognosen"
     },
     "meals": {
       "breakfast": "Frühstück",
       "lunch": "Mittagessen",
       "dinner": "Abendessen"
-    },
-    "table": {
-      "date": "Datum",
-      "type": "Typ",
-      "status": "Status",
-      "items": "Artikel",
-      "total": "Gesamt",
-      "actions": "Aktionen"
-    },
-    "actions": {
-      "view": "Bericht anzeigen",
-      "download": "Herunterladen",
-      "print": "Drucken",
-      "delete": "Löschen"
-    },
-    "status": {
-      "generated": "Erstellt",
-      "pending": "In Bearbeitung",
-      "failed": "Fehlgeschlagen"
-    },
-    "noData": "Keine Berichte für die ausgewählten Kriterien verfügbar",
-    "generateReport": "Bericht erstellen"
+    }
   }
-} 
+}
