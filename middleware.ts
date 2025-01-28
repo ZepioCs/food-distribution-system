@@ -7,9 +7,16 @@ export default createMiddleware({
 
   // Used when no locale matches
   defaultLocale: i18n.defaultLocale,
+
+  // Redirect to default locale when accessing root path
+  localePrefix: 'always'
 });
 
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ['/', '/(de|en)/:path*']
+  // Match all pathnames except for
+  // - /api (API routes)
+  // - /_next (Next.js internals)
+  // - /images (inside /public)
+  // - /favicon.ico, /sitemap.xml (static files)
+  matcher: ['/', '/((?!api|_next|images|favicon.ico|sitemap.xml).*)']
 }; 
