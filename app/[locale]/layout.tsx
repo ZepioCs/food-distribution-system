@@ -8,8 +8,15 @@ import { MainProvider } from "@/providers/main-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "FoodDist - Food Distribution System",
-  description: "Efficient food distribution management",
+  title: "FoodDist - Comprehensive Food Distribution Management System",
+  description: "Streamline your food distribution operations with FoodDist. Manage menus, track orders, and analyze data efficiently.",
+  keywords: "food distribution, menu management, order tracking, analytics, FoodDist",
+  author: "ZepioCS GmbH",
+  viewport: "width=device-width, initial-scale=1",
+  charset: "UTF-8",
+  icons: {
+    icon: "/favicon.ico"
+  }
 }
 
 async function getMessages(locale: string) {
