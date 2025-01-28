@@ -29,6 +29,10 @@
     "verifyEmail": "Please check your email to verify your account.",
     "registrationFailed": "Registration failed",
     "passwordTooWeak": "Password too weak",
+    "passwordTooWeakDescription": "Password must be at least 6 characters long",
+    "passwordIsTooWeak": "Password is too weak",
+    "passwordShouldBeAtLeastCharacters": "Password should be at least 6 characters long",
+    "passwordShouldIncludeDifferentTypesOfCharacters": "Password should include different types of characters",
     "passwordRequirements": {
       "length": "Password should be at least 6 characters long",
       "characters": "Password should include different types of characters"

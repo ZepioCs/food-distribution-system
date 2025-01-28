@@ -56,9 +56,11 @@
     "welcomeBack": "Willkommen zurück!",
     "loginFailed": "Anmeldung fehlgeschlagen",
     "registrationSuccess": "Registrierung erfolgreich",
-    "verifyEmail": "Bitte überprüfen Sie Ihre E-Mail zur Bestätigung.",
     "registrationFailed": "Registrierung fehlgeschlagen",
+    "verifyEmail": "Bitte überprüfen Sie Ihre E-Mail zur Bestätigung.",
+    "registrationSuccessful": "Registrierung erfolgreich",
     "passwordTooWeak": "Passwort zu schwach",
+    "passwordTooWeakDescription": "Das Passwort muss mindestens 6 Zeichen lang sein",
     "passwordRequirements": {
       "length": "Das Passwort muss mindestens 6 Zeichen lang sein",
       "characters": "Das Passwort sollte verschiedene Zeichenarten enthalten"

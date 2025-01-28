@@ -29,6 +29,10 @@
       "verifyEmail": "Por favor, revise su correo electrónico para verificar su cuenta.",
       "registrationFailed": "Error en el registro",
       "passwordTooWeak": "Contraseña demasiado débil",
+      "passwordTooWeakDescription": "La contraseña debe tener al menos 6 caracteres",
+      "passwordIsTooWeak": "La contraseña es demasiado débil",
+      "passwordShouldBeAtLeastCharacters": "La contraseña debe tener al menos 6 caracteres",
+      "passwordShouldIncludeDifferentTypesOfCharacters": "La contraseña debe incluir diferentes tipos de caracteres",
       "passwordRequirements": {
         "length": "La contraseña debe tener al menos 6 caracteres",
         "characters": "La contraseña debe incluir diferentes tipos de caracteres"

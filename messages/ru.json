@@ -29,6 +29,10 @@
       "verifyEmail": "Пожалуйста, проверьте свою электронную почту для подтверждения аккаунта.",
       "registrationFailed": "Ошибка регистрации",
       "passwordTooWeak": "Пароль слишком слабый",
+      "passwordTooWeakDescription": "Пароль должен быть не менее 6 символов",
+      "passwordIsTooWeak": "Пароль слишком слабый",
+      "passwordShouldBeAtLeastCharacters": "Пароль должен быть не менее 6 символов",
+      "passwordShouldIncludeDifferentTypesOfCharacters": "Пароль должен содержать различные типы символов",
       "passwordRequirements": {
         "length": "Пароль должен быть не менее 6 символов",
         "characters": "Пароль должен содержать различные типы символов"

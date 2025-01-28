@@ -29,6 +29,10 @@
       "verifyEmail": "Controlla la tua email per verificare il tuo account.",
       "registrationFailed": "Registrazione fallita",
       "passwordTooWeak": "Password troppo debole",
+      "passwordTooWeakDescription": "La password deve essere lunga almeno 6 caratteri",
+      "passwordIsTooWeak": "La password è troppo debole",
+      "passwordShouldBeAtLeastCharacters": "La password deve essere lunga almeno 6 caratteri",
+      "passwordShouldIncludeDifferentTypesOfCharacters": "La password deve includere diversi tipi di caratteri",
       "passwordRequirements": {
         "length": "La password deve essere lunga almeno 6 caratteri",
         "characters": "La password deve includere diversi tipi di caratteri"

@@ -18,7 +18,8 @@ import { useTranslations } from 'next-intl'
 import { EUserRole } from "@/models/default"
 
 const Login = observer(() => {
-  const t = useTranslations('Login')
+  const tLogin = useTranslations('Login')
+  const tAuth = useTranslations('Auth')
   const [isLoading, setIsLoading] = useState(false)
   const { appStore } = useRootStore()
   const router = useRouter()
@@ -58,12 +59,12 @@ const Login = observer(() => {
       appStore.profile = profile
       router.replace(`/${locale}/dashboard`)
       toast({
-        title: t('Auth.loginSuccess'),
-        description: t('Auth.welcomeBack'),
+        title: tAuth('loginSuccess'),
+        description: tAuth('welcomeBack'),
       })
     } catch (error: any) {
       toast({
-        title: t('Auth.loginFailed'),
+        title: tAuth('loginFailed'),
         description: error.message,
         variant: "destructive",
       })
@@ -83,8 +84,8 @@ const Login = observer(() => {
       if (registerPassword.length < 6) {
         console.log("Password too short, showing toast")
         toast({
-          title: "Password too weak",
-          description: "Password should be at least 6 characters long",
+          title: tAuth('passwordTooWeak'),
+          description: tAuth('passwordTooWeakDescription'),
           variant: "destructive",
         })
         setIsLoading(false)
@@ -99,22 +100,22 @@ const Login = observer(() => {
       })
       
       toast({
-        title: "Registration successful",
-        description: "Please check your email to verify your account.",
+        title: tAuth('registrationSuccessful'),
+        description: tAuth('verifyEmail'),
       })
     } catch (error: any) {
-      let errorMessage = "Registration failed"
+      let errorMessage = tAuth('registrationFailed')
       
       if (typeof error.message === 'string') {
         try {
           const parsedError = JSON.parse(error.message)
           if (parsedError.code === "weak_password") {
-            errorMessage = "Password is too weak. " + 
+            errorMessage = tAuth('passwordIsTooWeak') + " " + 
               parsedError.weak_password.reasons
                 .map((reason: any) => {
                   switch(reason) {
-                    case "length": return "Password should be at least 6 characters"
-                    case "characters": return "Password should include different types of characters"
+                    case "length": return tAuth('passwordShouldBeAtLeastCharacters')
+                    case "characters": return tAuth('passwordShouldIncludeDifferentTypesOfCharacters')
                     default: return reason
                   }
                 })
@@ -128,7 +129,7 @@ const Login = observer(() => {
       }
   
       toast({
-        title: "Registration failed",
+        title: tAuth('registrationFailed'),
         description: errorMessage,
         variant: "destructive",
       })
@@ -149,36 +150,36 @@ const Login = observer(() => {
         <CardContent>
           <Tabs defaultValue="login" className="space-y-4">
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="login">{t('tabs.login')}</TabsTrigger>
-              <TabsTrigger value="register">{t('tabs.register')}</TabsTrigger>
+              <TabsTrigger value="login">{tLogin('tabs.login')}</TabsTrigger>
+              <TabsTrigger value="register">{tLogin('tabs.register')}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="login">
               <form onSubmit={handleLogin} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="email">{t('form.email')}</Label>
+                  <Label htmlFor="email">{tLogin('form.email')}</Label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder={t('form.emailPlaceholder')}
+                    placeholder={tLogin('form.emailPlaceholder')}
                     value={loginEmail}
                     onChange={(e) => setLoginEmail(e.target.value)}
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="password">{t('form.password')}</Label>
+                  <Label htmlFor="password">{tLogin('form.password')}</Label>
                   <Input
                     id="password"
                     type="password"
-                    placeholder={t('form.passwordPlaceholder')}
+                    placeholder={tLogin('form.passwordPlaceholder')}
                     value={loginPassword}
                     onChange={(e) => setLoginPassword(e.target.value)}
                     required
                   />
                 </div>
                 <Button className="w-full" type="submit" disabled={isLoading}>
-                  {isLoading ? t('form.loading') : t('form.loginButton')}
+                  {isLoading ? tLogin('form.loading') : tLogin('form.loginButton')}
                 </Button>
               </form>
             </TabsContent>
@@ -186,52 +187,52 @@ const Login = observer(() => {
             <TabsContent value="register">
               <form onSubmit={handleRegister} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="register-email">{t('form.email')}</Label>
+                  <Label htmlFor="register-email">{tLogin('form.email')}</Label>
                   <Input
                     id="register-email"
                     type="email"
-                    placeholder={t('form.emailPlaceholder')}
+                    placeholder={tLogin('form.emailPlaceholder')}
                     value={registerEmail}
                     onChange={(e) => setRegisterEmail(e.target.value)}
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="register-username">{t('form.username')}</Label>
+                  <Label htmlFor="register-username">{tLogin('form.username')}</Label>
                   <Input
                     id="register-username"
-                    placeholder={t('form.usernamePlaceholder')}
+                    placeholder={tLogin('form.usernamePlaceholder')}
                     value={registerUsername}
                     onChange={(e) => setRegisterUsername(e.target.value)}
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="register-password">{t('form.password')}</Label>
+                  <Label htmlFor="register-password">{tLogin('form.password')}</Label>
                   <Input
                     id="register-password"
                     type="password"
-                    placeholder={t('form.passwordPlaceholder')}
+                    placeholder={tLogin('form.passwordPlaceholder')}
                     value={registerPassword}
                     onChange={(e) => setRegisterPassword(e.target.value)}
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="role">{t('form.role')}</Label>
+                  <Label htmlFor="role">{tLogin('form.role')}</Label>
                   <Select value={registerRole} onValueChange={(value: any) => setRegisterRole(value)}>
                     <SelectTrigger>
-                      <SelectValue placeholder={t('form.rolePlaceholder')} />
+                      <SelectValue placeholder={tLogin('form.rolePlaceholder')} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="teacher">{t('roles.teacher')}</SelectItem>
-                      <SelectItem value="food_provider">{t('roles.foodProvider')}</SelectItem>
-                      <SelectItem value="admin">{t('roles.admin')}</SelectItem>
+                      <SelectItem value="teacher">{tLogin('roles.teacher')}</SelectItem>
+                      <SelectItem value="food_provider">{tLogin('roles.foodProvider')}</SelectItem>
+                      <SelectItem value="admin">{tLogin('roles.admin')}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <Button className="w-full" type="submit" disabled={isLoading}>
-                  {isLoading ? t('form.loading') : t('form.registerButton')}
+                  {isLoading ? tLogin('form.loading') : tLogin('form.registerButton')}
                 </Button>
               </form>
             </TabsContent>
