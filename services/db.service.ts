@@ -29,7 +29,6 @@ const dbService = {
             .eq('user_id', userId);
 
         if (error) {
-            console.error('Update error:', error);
             throw error;
         }
     },
@@ -49,7 +48,6 @@ const dbService = {
     
     async getMeals(): Promise<IMeal[]> {
         const { data: meals, error } = await supabase.from('meals').select('*')
-        console.log("data", meals);
         if (error) throw error;
         return meals;
     },
@@ -322,7 +320,6 @@ const dbService = {
             .order('created_at', { ascending: false })
 
         if (error) throw error
-        console.log('Fetched profiles:', data) // Debug log
         return data || []
     },
 
@@ -336,7 +333,6 @@ const dbService = {
             .order('date', { ascending: false })
 
         if (error) throw error
-        console.log('Fetched orders:', data) // Debug log
         return data || []
     },
 
