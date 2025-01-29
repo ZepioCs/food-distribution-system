@@ -29,6 +29,7 @@ interface IProfile {
         dairy_free: boolean;
         nut_free: boolean;
     };
+    is_approved: boolean;
 }
 
 interface IOptions {

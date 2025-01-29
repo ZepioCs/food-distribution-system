@@ -75,6 +75,7 @@ class AuthService {
           username,
           role,
           email,
+          is_approved: false,
         },
       ])
 

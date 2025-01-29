@@ -20,6 +20,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { EUserRole } from "@/models/default"
+import { supabase } from "@/services/auth.service"
 
 interface RegisterRequest {
   id: string
@@ -57,7 +59,16 @@ export default function AdminPanel() {
   const handleAccept = async (request: RegisterRequest) => {
     setIsLoading(true)
     try {
-      await dbService.acceptRegisterRequest(request.id)
+      await dbService.updateProfile(request.user_id, {
+        user_id: request.user_id,
+        email: request.email,
+        username: request.username,
+        role: request.role as EUserRole,
+        is_approved: true
+      })
+
+      await dbService.deleteRegisterRequest(request.id)
+
       toast({
         title: t('requestAccepted'),
         description: t('userApproved', { email: request.email }),
@@ -68,6 +79,44 @@ export default function AdminPanel() {
       toast({
         title: t('acceptError'),
         description: t('errorAcceptingRequest'),
+        variant: "destructive",
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const handleDecline = async (request: RegisterRequest) => {
+    setIsLoading(true)
+    try {
+      // Delete the user's profile
+      const { error: profileError } = await supabase
+        .from('users')
+        .delete()
+        .eq('user_id', request.user_id)
+
+      if (profileError) throw profileError
+
+      // Delete the user's auth entry
+      const { error: authError } = await supabase.auth.admin.deleteUser(
+        request.user_id
+      )
+
+      if (authError) throw authError
+
+      // Delete the registration request
+      await dbService.deleteRegisterRequest(request.id)
+
+      toast({
+        title: t('requestDeclined'),
+        description: t('userDeclined', { email: request.email }),
+      })
+      fetchRequests()
+    } catch (error) {
+      console.error('Failed to decline request:', error)
+      toast({
+        title: t('declineError'),
+        description: t('errorDecliningRequest'),
         variant: "destructive",
       })
     } finally {
@@ -101,12 +150,20 @@ export default function AdminPanel() {
                 <TableCell>
                   {new Date(request.created_at).toLocaleDateString()}
                 </TableCell>
-                <TableCell>
+                <TableCell className="space-x-2">
                   <Button
                     onClick={() => handleAccept(request)}
                     disabled={isLoading}
+                    variant="default"
                   >
                     {t('actions.accept')}
+                  </Button>
+                  <Button
+                    onClick={() => handleDecline(request)}
+                    disabled={isLoading}
+                    variant="destructive"
+                  >
+                    {t('actions.decline')}
                   </Button>
                 </TableCell>
               </TableRow>

@@ -7,6 +7,7 @@ import AdminPanel from "./admin-panel"
 import AdminGeneral from "./admin-general"
 import AdminTesting from "./admin-testing"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import AdminUserManagement from "./admin-user-management"
 
 export default function AdminDashboard() {
   const t = useTranslations('Admin')
@@ -14,9 +15,10 @@ export default function AdminDashboard() {
 
   return (
     <div className="container mx-auto py-6">
-      <Tabs defaultValue="general" className="w-full" onValueChange={setActiveTab}>
-        <TabsList className="grid w-full grid-cols-3">
+      <Tabs defaultValue="general" className="w-full" onValueChange={setActiveTab} value={activeTab}>
+        <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="general">{t('tabs.general')}</TabsTrigger>
+          <TabsTrigger value="user-management">{t('tabs.user-management')}</TabsTrigger>
           <TabsTrigger value="requests">{t('tabs.requests')}</TabsTrigger>
           <TabsTrigger value="testing">{t('tabs.testing')}</TabsTrigger>
         </TabsList>
@@ -31,6 +33,10 @@ export default function AdminDashboard() {
               <AdminGeneral />
             </CardContent>
           </Card>
+        </TabsContent>
+
+        <TabsContent value="user-management">
+          <AdminUserManagement />
         </TabsContent>
         
         <TabsContent value="requests">

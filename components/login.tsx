@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useRootStore } from "@/providers/store-provider"
 import { useRouter, useParams } from "next/navigation"
-import { authService } from "@/services/auth.service"
+import { authService, supabase } from "@/services/auth.service"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
@@ -53,7 +53,47 @@ const Login = observer(() => {
         email: loginEmail,
         password: loginPassword,
       })
+
+      // First check if there's a pending registration request
+      const requests = await dbService.getRegisterRequests()
+      const pendingRequest = requests.find(req => req.user_id === data.user?.id)
+      
+      if (pendingRequest) {
+        toast({
+          title: tAuth('loginFailed'),
+          description: tAuth('registrationPendingDescription'),
+          variant: "destructive",
+        })
+        await authService.logout()
+        setIsLoading(false)
+        return
+      }
+
+      // If no pending request, get the profile
       const profile = await dbService.getProfile(data.user?.id)
+      if (!profile) {
+        toast({
+          title: tAuth('loginFailed'),
+          description: tAuth('accountNotFound'),
+          variant: "destructive",
+        })
+        await authService.logout()
+        setIsLoading(false)
+        return
+      }
+
+      // Check if user is approved
+      if (!profile.is_approved) {
+        toast({
+          title: tAuth('loginFailed'),
+          description: tAuth('accountNotApproved'),
+          variant: "destructive",
+        })
+        await authService.logout()
+        setIsLoading(false)
+        return
+      }
+
       const userRole = profile.role as EUserRole
       appStore.login(userRole)
       appStore.profile = profile
@@ -88,32 +128,28 @@ const Login = observer(() => {
         return
       }
 
-      // Register with Supabase Auth
-      const { user, session } = await authService.register({
+      // Register using authService
+      const { user } = await authService.register({
         email: registerEmail,
         password: registerPassword,
         username: registerUsername,
-        role: registerRole as EUserRole,
+        role: registerRole as EUserRole
       })
 
       if (!user) throw new Error('Registration failed')
 
-      // For teachers, create profile directly
-      // For other roles, create a register request
       if (registerRole === EUserRole.TEACHER) {
+        // For teachers, just update the profile to be approved
         await dbService.updateProfile(user.id, {
-          user_id: user.id,
-          email: registerEmail,
-          username: registerUsername,
-          role: EUserRole.TEACHER
+          is_approved: true
         })
-
+        
         toast({
           title: tAuth('registrationSuccessful'),
-          description: tAuth('verifyEmail'),
+          description: tAuth('teacherRegistrationSuccess'),
         })
       } else {
-        // Create a register request for admin approval
+        // For admin and food provider roles, create a register request
         await dbService.createRegisterRequest({
           user_id: user.id,
           email: registerEmail,
@@ -122,38 +158,19 @@ const Login = observer(() => {
         })
 
         toast({
-          title: tAuth('registrationSuccessful'),
-          description: tAuth('awaitingApproval'),
+          title: tAuth('registrationPending'),
+          description: tAuth('registrationPendingDescription'),
         })
       }
-    } catch (error: any) {
-      let errorMessage = tAuth('registrationFailed')
-      
-      if (typeof error.message === 'string') {
-        try {
-          const parsedError = JSON.parse(error.message)
-          if (parsedError.code === "weak_password") {
-            errorMessage = tAuth('passwordIsTooWeak') + " " + 
-              parsedError.weak_password.reasons
-                .map((reason: any) => {
-                  switch(reason) {
-                    case "length": return tAuth('passwordShouldBeAtLeastCharacters')
-                    case "characters": return tAuth('passwordShouldIncludeDifferentTypesOfCharacters')
-                    default: return reason
-                  }
-                })
-                .join(". ")
-          } else {
-            errorMessage = parsedError.message || error.message
-          }
-        } catch {
-          errorMessage = error.message
-        }
-      }
 
+      // Redirect to login page after 3 seconds for all users
+      setTimeout(() => {
+        window.location.reload()
+      }, 3000)
+    } catch (error: any) {
       toast({
         title: tAuth('registrationFailed'),
-        description: errorMessage,
+        description: error.message,
         variant: "destructive",
       })
     } finally {

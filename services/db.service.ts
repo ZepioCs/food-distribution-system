@@ -9,31 +9,29 @@ const dbService = {
     },
 
     async updateProfile(userId: string, profile: Partial<IProfile>): Promise<void> {
+        const { data: currentProfile, error: fetchError } = await supabase
+            .from('users')
+            .select('*')
+            .eq('user_id', userId)
+            .single();
+
+        if (fetchError) throw fetchError;
+
+        const updatedProfile = {
+            ...currentProfile,
+            ...profile,
+            user_id: userId,
+        };
+
         const { error } = await supabase
             .from('users')
-            .update(profile)
+            .upsert(updatedProfile)
             .eq('user_id', userId);
-        if (error) throw error;
-    },
 
-    async updateAvatar(userId: string, file: File): Promise<string> {
-        const fileExt = file.name.split('.').pop()
-        const fileName = `${userId}-${Math.random()}.${fileExt}`
-        const filePath = `avatars/${fileName}`
-
-        const { error: uploadError } = await supabase.storage
-            .from('user-content')
-            .upload(filePath, file)
-
-        if (uploadError) throw uploadError
-
-        const { data: { publicUrl } } = supabase.storage
-            .from('user-content')
-            .getPublicUrl(filePath)
-
-        await this.updateProfile(userId, { avatar_url: publicUrl })
-        
-        return publicUrl
+        if (error) {
+            console.error('Update error:', error);
+            throw error;
+        }
     },
 
     async updatePassword(email: string, password: string): Promise<void> {
@@ -304,6 +302,15 @@ const dbService = {
         const { error } = await supabase
             .from('registerRequests')
             .insert(userData)
+
+        if (error) throw error
+    },
+
+    async deleteRegisterRequest(requestId: string): Promise<void> {
+        const { error } = await supabase
+            .from('registerRequests')
+            .delete()
+            .eq('id', requestId)
 
         if (error) throw error
     },
