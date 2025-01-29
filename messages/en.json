@@ -361,7 +361,7 @@
     },
     "roles": {
       "teacher": "Teacher",
-      "foodProvider": "Food Provider",
+      "food_provider": "Food Provider",
       "admin": "Administrator"
     },
     "errorFetchingUsers": "Failed to fetch users",

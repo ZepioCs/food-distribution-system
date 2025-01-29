@@ -353,7 +353,7 @@
     },
     "roles": {
       "teacher": "Insegnante",
-      "foodProvider": "Fornitore di Cibo",
+      "food_provider": "Fornitore di Cibo",
       "admin": "Amministratore"
     },
     "errorFetchingUsers": "Errore nel recupero degli utenti",

@@ -353,7 +353,7 @@
     },
     "roles": {
       "teacher": "Lehrer",
-      "foodProvider": "Essensanbieter",
+      "food_provider": "Essensanbieter",
       "admin": "Administrator"
     },
     "errorFetchingUsers": "Fehler beim Abrufen der Benutzer",
