@@ -297,6 +297,13 @@ const AdminGeneral = observer(() => {
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                  <span>{t('metrics.successNotifications')}</span>
+                </div>
+                <span className="font-medium">{metrics.notifications?.success || 0}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
                   <span>{t('metrics.warningNotifications')}</span>
                 </div>

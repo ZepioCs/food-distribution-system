@@ -29,6 +29,7 @@ export interface SystemMetrics {
     total: number
     unread: number
     info: number
+    success: number
     warning: number
     error: number
   }
@@ -133,6 +134,7 @@ class AdminStore {
             total: notifications.length,
             unread: notifications.filter((n: INotification) => !n.read).length,
             info: notifications.filter((n: INotification) => n.type === 'info').length,
+            success: notifications.filter((n: INotification) => n.type === 'success').length,
             warning: notifications.filter((n: INotification) => n.type === 'warning').length,
             error: notifications.filter((n: INotification) => n.type === 'error').length
           },

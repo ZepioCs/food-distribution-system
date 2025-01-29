@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, ReactNode } from "react"
-import { RootStore } from "@/store/root.store"
+import { RootStore } from "@/stores/root.store"
 import { enableStaticRendering } from "mobx-react-lite"
 
 // Enable static rendering for server-side
