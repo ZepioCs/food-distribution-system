@@ -11,7 +11,8 @@
     "profile": "Профиль",
     "settings": "Настройки",
     "feedback": "Обратная связь",
-    "logout": "Выйти"
+    "logout": "Выйти",
+    "adminDashboard": "Admin Dashboard"
   },
   "Auth": {
     "loginSuccess": "Вход выполнен успешно",
@@ -23,7 +24,17 @@
     "passwordTooWeakDescription": "Пароль должен быть не менее 6 символов",
     "passwordIsTooWeak": "Пароль слишком слабый",
     "passwordShouldBeAtLeastCharacters": "Пароль должен быть не менее 6 символов",
-    "passwordShouldIncludeDifferentTypesOfCharacters": "Пароль должен содержать различные типы символов"
+    "passwordShouldIncludeDifferentTypesOfCharacters": "Пароль должен содержать различные типы символов",
+    "registrationSuccessful": "Registration successful",
+    "registrationPending": "Регистрация на рассмотрении",
+    "registrationPendingDescription": "Ваша регистрация находится на рассмотрении. Пожалуйста, подождите, пока администратор рассмотрит вашу заявку. Вы сможете войти в систему после одобрения вашей учетной записи.",
+    "awaitingApproval": "Your registration request has been submitted and is awaiting admin approval.",
+    "teacherRegistrationSuccess": "Registration successful! You can now log in with your credentials.",
+    "registrationEmailSent": "Registration approval email has been sent to {email}",
+    "completeRegistration": "Complete Your Registration",
+    "completeRegistrationDescription": "Please complete your registration by setting up your account.",
+    "accountNotApproved": "Ваша учетная запись ожидает одобрения. Пожалуйста, дождитесь одобрения администратора.",
+    "accountNotFound": "Учетная запись не найдена. Пожалуйста, убедитесь, что вы зарегистрировались и подтвердили свою электронную почту."
   },
   "Analytics": {
     "title": "Аналитика",
@@ -241,5 +252,135 @@
       "lunch": "Обед",
       "dinner": "Ужин"
     }
+  },
+  "Admin": {
+    "title": "Панель администратора",
+    "description": "Управление запросами на регистрацию пользователей и настройками системы",
+    "tabs": {
+      "general": "Общее",
+      "user-management": "Управление пользователями",
+      "requests": "Запросы",
+      "testing": "Тестовая панель"
+    },
+    "generalTab": {
+      "title": "Общее администрирование",
+      "description": "Обзор и общие элементы управления",
+      "lastUpdated": "Последнее обновление: {time}",
+      "errorFetchingMetrics": "Ошибка при получении метрик",
+      "noData": "Нет данных",
+      "sections": {
+        "orderTrends": "Тенденции заказов",
+        "topItems": "Популярные позиции",
+        "notifications": "Уведомления"
+      },
+      "metrics": {
+        "totalUsers": "Всего пользователей",
+        "teachers": "Учителя",
+        "foodProviders": "Поставщики еды",
+        "admins": "Администраторы",
+        "averagePerDay": "Среднее количество заказов/день",
+        "averagePerWeek": "Среднее количество заказов/неделя",
+        "averagePerMonth": "Среднее количество заказов/месяц",
+        "averageOrderValue": "Средняя стоимость заказа",
+        "menuItems": "Позиции меню",
+        "revenue": "Выручка",
+        "totalRevenue": "Общая выручка",
+        "orderCount": "Количество заказов",
+        "orderValue": "Стоимость заказа",
+        "totalItems": "Всего позиций",
+        "activeNotifications": "{count} активных уведомлений",
+        "infoNotifications": "Информационные уведомления",
+        "warningNotifications": "Предупреждающие уведомления",
+        "errorNotifications": "Уведомления об ошибках",
+        "averageRevenuePerOrder": "Средняя выручка за заказ",
+        "dailyRevenue": "Ежедневная выручка",
+        "monthlyRevenue": "Ежемесячная выручка"
+      },
+      "filters": {
+        "timeRange": "Временной период",
+        "year": "Этот год",
+        "month": "Этот месяц",
+        "all": "Все время",
+        "last30Days": "Последние 30 дней",
+        "last90Days": "Последние 90 дней",
+        "tryDifferentRange": "Попробуйте выбрать другой период"
+      }
+    },
+    "testingTab": {
+      "title": "Тестовая панель",
+      "description": "Тестирование и отладка функций системы",
+      "endpoints": {
+        "title": "API-эндпоинты",
+        "name": "Эндпоинт",
+        "actions": "Действия",
+        "test": "Тест"
+      },
+      "endpointTested": "Эндпоинт протестирован",
+      "endpointWorking": "работает корректно",
+      "testFailed": "Тест не пройден",
+      "endpointError": "произошла ошибка"
+    },
+    "table": {
+      "email": "Email",
+      "username": "Имя пользователя",
+      "role": "Роль",
+      "requestDate": "Дата запроса",
+      "actions": "Действия"
+    },
+    "actions": {
+      "accept": "Принять",
+      "decline": "Отклонить"
+    },
+    "noRequests": "Нет ожидающих запросов на регистрацию",
+    "requestAccepted": "Запрос принят",
+    "userApproved": "Пользователь {email} был одобрен",
+    "userManagement": {
+      "title": "Управление пользователями",
+      "description": "Управление пользователями системы и их ролями",
+      "addUser": "Добавить пользователя",
+      "addNewUser": "Добавить нового пользователя",
+      "addUserDescription": "Создать новую учетную запись пользователя. Пользователь получит email для установки пароля.",
+      "editUser": "Редактировать пользователя",
+      "editUserDescription": "Изменить данные пользователя и роль",
+      "email": "Email",
+      "username": "Имя пользователя",
+      "role": "Роль",
+      "createdAt": "Создан",
+      "actions": "Действия",
+      "selectRole": "Выберите роль",
+      "noUsers": "Пользователи не найдены"
+    },
+    "roles": {
+      "teacher": "Учитель",
+      "foodProvider": "Поставщик еды",
+      "admin": "Администратор"
+    },
+    "errorFetchingUsers": "Ошибка при получении списка пользователей",
+    "userAdded": "Пользователь добавлен",
+    "userAddedDescription": "Пользователь {email} успешно добавлен",
+    "addError": "Ошибка",
+    "errorAddingUser": "Ошибка при добавлении пользователя",
+    "userUpdated": "Пользователь обновлен",
+    "userUpdatedDescription": "Пользователь {email} успешно обновлен",
+    "updateError": "Ошибка",
+    "errorUpdatingUser": "Ошибка при обновлении пользователя",
+    "userDeleted": "Пользователь удален",
+    "userDeletedDescription": "Пользователь успешно удален",
+    "deleteError": "Ошибка",
+    "errorDeletingUser": "Ошибка при удалении пользователя",
+    "confirmDeleteUser": "Вы уверены, что хотите удалить этого пользователя? Это действие нельзя отменить.",
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "cancel": "Отмена",
+    "add": "Добавить",
+    "save": "Сохранить",
+    "requestDeclined": "Запрос отклонен",
+    "userDeclined": "Пользователь {email} был отклонен и удален",
+    "fetchError": "Ошибка",
+    "errorFetchingRequests": "Не удалось получить запросы на регистрацию",
+    "acceptError": "Ошибка",
+    "errorAcceptingRequest": "Не удалось принять запрос на регистрацию",
+    "declineError": "Ошибка",
+    "errorDecliningRequest": "Не удалось отклонить запрос на регистрацию"
   }
 }

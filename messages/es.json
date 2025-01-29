@@ -11,7 +11,8 @@
     "profile": "Perfil",
     "settings": "Configuración",
     "feedback": "Comentarios",
-    "logout": "Cerrar Sesión"
+    "logout": "Cerrar Sesión",
+    "adminDashboard": "Admin Dashboard"
   },
   "Auth": {
     "loginSuccess": "Inicio de sesión exitoso",
@@ -23,7 +24,17 @@
     "passwordTooWeakDescription": "La contraseña debe tener al menos 6 caracteres",
     "passwordIsTooWeak": "La contraseña es demasiado débil",
     "passwordShouldBeAtLeastCharacters": "La contraseña debe tener al menos 6 caracteres",
-    "passwordShouldIncludeDifferentTypesOfCharacters": "La contraseña debe incluir diferentes tipos de caracteres"
+    "passwordShouldIncludeDifferentTypesOfCharacters": "La contraseña debe incluir diferentes tipos de caracteres",
+    "registrationSuccessful": "Registration successful",
+    "registrationPending": "Registro en revisión",
+    "registrationPendingDescription": "Tu registro está actualmente en revisión. Por favor, espera a que un administrador revise tu solicitud. Podrás iniciar sesión una vez que tu cuenta sea aprobada.",
+    "awaitingApproval": "Your registration request has been submitted and is awaiting admin approval.",
+    "teacherRegistrationSuccess": "Registration successful! You can now log in with your credentials.",
+    "registrationEmailSent": "Registration approval email has been sent to {email}",
+    "completeRegistration": "Complete Your Registration",
+    "completeRegistrationDescription": "Please complete your registration by setting up your account.",
+    "accountNotApproved": "Tu cuenta está pendiente de aprobación. Por favor, espera a que un administrador apruebe tu cuenta.",
+    "accountNotFound": "Cuenta no encontrada. Por favor, asegúrate de que te has registrado y verificado tu correo electrónico."
   },
   "Analytics": {
     "title": "Análisis",
@@ -241,5 +252,135 @@
       "lunch": "Almuerzo",
       "dinner": "Cena"
     }
+  },
+  "Admin": {
+    "title": "Admin Panel",
+    "description": "Manage user registration requests and system settings",
+    "tabs": {
+      "general": "General",
+      "user-management": "User Management",
+      "requests": "Requests",
+      "testing": "Testing Dashboard"
+    },
+    "generalTab": {
+      "title": "General Administration",
+      "description": "Overview and general administrative controls",
+      "lastUpdated": "Last updated: {time}",
+      "errorFetchingMetrics": "Error fetching metrics data",
+      "noData": "No data available",
+      "sections": {
+        "orderTrends": "Order Trends",
+        "topItems": "Top Items",
+        "notifications": "Notifications"
+      },
+      "metrics": {
+        "totalUsers": "Total Users",
+        "teachers": "Teachers",
+        "foodProviders": "Food Providers",
+        "admins": "Administrators",
+        "averagePerDay": "Average Orders/Day",
+        "averagePerWeek": "Average Orders/Week",
+        "averagePerMonth": "Average Orders/Month",
+        "averageOrderValue": "Average Order Value",
+        "menuItems": "Menu Items",
+        "revenue": "Revenue",
+        "totalRevenue": "Total Revenue",
+        "orderCount": "Order Count",
+        "orderValue": "Order Value",
+        "totalItems": "Total Items",
+        "activeNotifications": "{count} active notifications",
+        "infoNotifications": "Info Notifications",
+        "warningNotifications": "Warning Notifications",
+        "errorNotifications": "Error Notifications",
+        "averageRevenuePerOrder": "Average Revenue Per Order",
+        "dailyRevenue": "Daily Revenue",
+        "monthlyRevenue": "Monthly Revenue"
+      },
+      "filters": {
+        "timeRange": "Time Range",
+        "year": "This Year",
+        "month": "This Month",
+        "all": "All Time",
+        "last30Days": "Last 30 Days",
+        "last90Days": "Last 90 Days",
+        "tryDifferentRange": "Try selecting a different time range"
+      }
+    },
+    "testingTab": {
+      "title": "Testing Dashboard",
+      "description": "Test and debug system features",
+      "endpoints": {
+        "title": "API Endpoints",
+        "name": "Endpoint",
+        "actions": "Actions",
+        "test": "Test"
+      },
+      "endpointTested": "Endpoint Tested",
+      "endpointWorking": "is working correctly",
+      "testFailed": "Test Failed",
+      "endpointError": "encountered an error"
+    },
+    "table": {
+      "email": "Email",
+      "username": "Username",
+      "role": "Role",
+      "requestDate": "Request Date",
+      "actions": "Actions"
+    },
+    "actions": {
+      "accept": "Accept",
+      "decline": "Decline"
+    },
+    "noRequests": "No pending registration requests",
+    "requestAccepted": "Request Accepted",
+    "userApproved": "User {email} has been approved",
+    "requestDeclined": "Solicitud rechazada",
+    "userDeclined": "Usuario {email} ha sido rechazado y eliminado",
+    "fetchError": "Error",
+    "errorFetchingRequests": "Failed to fetch registration requests",
+    "acceptError": "Error",
+    "errorAcceptingRequest": "Failed to accept registration request",
+    "declineError": "Error",
+    "errorDecliningRequest": "Error al rechazar la solicitud de registro",
+    "userManagement": {
+      "title": "User Management",
+      "description": "Manage system users and their roles",
+      "addUser": "Add User",
+      "addNewUser": "Add New User",
+      "addUserDescription": "Create a new user account. The user will receive an email to set their password.",
+      "editUser": "Edit User",
+      "editUserDescription": "Modify user details and role",
+      "email": "Email",
+      "username": "Username",
+      "role": "Role",
+      "createdAt": "Created At",
+      "actions": "Actions",
+      "selectRole": "Select role",
+      "noUsers": "No users found"
+    },
+    "roles": {
+      "teacher": "Teacher",
+      "foodProvider": "Food Provider",
+      "admin": "Administrator"
+    },
+    "errorFetchingUsers": "Failed to fetch users",
+    "userAdded": "User Added",
+    "userAddedDescription": "User {email} has been added successfully",
+    "addError": "Error",
+    "errorAddingUser": "Failed to add user",
+    "userUpdated": "User Updated",
+    "userUpdatedDescription": "User {email} has been updated successfully",
+    "updateError": "Error",
+    "errorUpdatingUser": "Failed to update user",
+    "userDeleted": "User Deleted",
+    "userDeletedDescription": "User has been deleted successfully",
+    "deleteError": "Error",
+    "errorDeletingUser": "Failed to delete user",
+    "confirmDeleteUser": "Are you sure you want to delete this user? This action cannot be undone.",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "add": "Add",
+    "save": "Save"
   }
 }

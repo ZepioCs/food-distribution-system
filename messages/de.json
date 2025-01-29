@@ -31,7 +31,8 @@
     "profile": "Profil",
     "settings": "Einstellungen",
     "feedback": "Feedback",
-    "logout": "Abmelden"
+    "logout": "Abmelden",
+    "adminDashboard": "Admin Dashboard"
   },
   "Auth": {
     "loginSuccess": "Anmeldung erfolgreich",
@@ -41,7 +42,19 @@
     "verifyEmail": "Bitte überprüfen Sie Ihre E-Mail zur Bestätigung.",
     "registrationSuccessful": "Registrierung erfolgreich",
     "passwordTooWeak": "Passwort zu schwach",
-    "passwordTooWeakDescription": "Das Passwort muss mindestens 6 Zeichen lang sein"
+    "passwordTooWeakDescription": "Das Passwort muss mindestens 6 Zeichen lang sein",
+    "registrationPending": "Registrierung wird geprüft",
+    "registrationPendingDescription": "Ihre Registrierung wird derzeit geprüft. Bitte warten Sie, bis ein Administrator Ihre Anfrage überprüft hat. Sie können sich einloggen, sobald Ihr Konto freigegeben wurde.",
+    "passwordIsTooWeak": "Password is too weak",
+    "passwordShouldBeAtLeastCharacters": "Password should be at least 6 characters long",
+    "passwordShouldIncludeDifferentTypesOfCharacters": "Password should include different types of characters",
+    "awaitingApproval": "Your registration request has been submitted and is awaiting admin approval.",
+    "teacherRegistrationSuccess": "Registration successful! You can now log in with your credentials.",
+    "registrationEmailSent": "Registration approval email has been sent to {email}",
+    "completeRegistration": "Complete Your Registration",
+    "completeRegistrationDescription": "Please complete your registration by setting up your account.",
+    "accountNotApproved": "Ihr Konto wartet auf Freigabe. Bitte warten Sie, bis ein Administrator Ihr Konto freigibt.",
+    "accountNotFound": "Konto nicht gefunden. Bitte stellen Sie sicher, dass Sie sich registriert und Ihre E-Mail bestätigt haben."
   },
   "Analytics": {
     "title": "Analysen",
@@ -239,5 +252,135 @@
       "lunch": "Mittagessen",
       "dinner": "Abendessen"
     }
+  },
+  "Admin": {
+    "title": "Admin-Panel",
+    "description": "Verwalten Sie Benutzerregistrierungsanfragen und Systemeinstellungen",
+    "tabs": {
+      "general": "Allgemein",
+      "user-management": "Benutzerverwaltung",
+      "requests": "Anfragen",
+      "testing": "Test-Dashboard"
+    },
+    "generalTab": {
+      "title": "Allgemeine Verwaltung",
+      "description": "Übersicht und allgemeine Verwaltungskontrollen",
+      "lastUpdated": "Zuletzt aktualisiert: {time}",
+      "errorFetchingMetrics": "Fehler beim Abrufen der Metrikdaten",
+      "noData": "Keine Daten verfügbar",
+      "sections": {
+        "orderTrends": "Bestelltrends",
+        "topItems": "Top-Artikel",
+        "notifications": "Benachrichtigungen"
+      },
+      "metrics": {
+        "totalUsers": "Gesamtbenutzer",
+        "teachers": "Lehrer",
+        "foodProviders": "Essensanbieter",
+        "admins": "Administratoren",
+        "averagePerDay": "Durchschnittliche Bestellungen/Tag",
+        "averagePerWeek": "Durchschnittliche Bestellungen/Woche",
+        "averagePerMonth": "Durchschnittliche Bestellungen/Monat",
+        "averageOrderValue": "Durchschnittlicher Bestellwert",
+        "menuItems": "Menüpunkte",
+        "revenue": "Umsatz",
+        "totalRevenue": "Gesamtumsatz",
+        "orderCount": "Bestellanzahl",
+        "orderValue": "Bestellwert",
+        "totalItems": "Gesamtartikel",
+        "activeNotifications": "{count} aktive Benachrichtigungen",
+        "infoNotifications": "Info-Benachrichtigungen",
+        "warningNotifications": "Warnungsbenachrichtigungen",
+        "errorNotifications": "Fehlerbenachrichtigungen",
+        "averageRevenuePerOrder": "Durchschnittlicher Umsatz pro Bestellung",
+        "dailyRevenue": "Tagesumsatz",
+        "monthlyRevenue": "Monatsumsatz"
+      },
+      "filters": {
+        "timeRange": "Zeitraum",
+        "year": "Dieses Jahr",
+        "month": "Dieser Monat",
+        "all": "Alle Zeit",
+        "last30Days": "Letzte 30 Tage",
+        "last90Days": "Letzte 90 Tage",
+        "tryDifferentRange": "Versuchen Sie einen anderen Zeitraum auszuwählen"
+      }
+    },
+    "testingTab": {
+      "title": "Test-Dashboard",
+      "description": "Testen und debuggen Sie Systemfunktionen",
+      "endpoints": {
+        "title": "API-Endpunkte",
+        "name": "Endpunkt",
+        "actions": "Aktionen",
+        "test": "Test"
+      },
+      "endpointTested": "Endpunkt getestet",
+      "endpointWorking": "funktioniert korrekt",
+      "testFailed": "Test fehlgeschlagen",
+      "endpointError": "Fehler aufgetreten"
+    },
+    "table": {
+      "email": "E-Mail",
+      "username": "Benutzername",
+      "role": "Rolle",
+      "requestDate": "Anfragedatum",
+      "actions": "Aktionen"
+    },
+    "actions": {
+      "accept": "Akzeptieren",
+      "decline": "Ablehnen"
+    },
+    "noRequests": "Keine ausstehenden Registrierungsanfragen",
+    "requestAccepted": "Anfrage akzeptiert",
+    "userApproved": "Benutzer {email} wurde genehmigt",
+    "userManagement": {
+      "title": "Benutzerverwaltung",
+      "description": "Verwalten Sie Systembenutzer und ihre Rollen",
+      "addUser": "Benutzer hinzufügen",
+      "addNewUser": "Neuen Benutzer hinzufügen",
+      "addUserDescription": "Erstellen Sie ein neues Benutzerkonto. Der Benutzer erhält eine E-Mail zum Festlegen des Passworts.",
+      "editUser": "Benutzer bearbeiten",
+      "editUserDescription": "Benutzerdetails und Rolle ändern",
+      "email": "E-Mail",
+      "username": "Benutzername",
+      "role": "Rolle",
+      "createdAt": "Erstellt am",
+      "actions": "Aktionen",
+      "selectRole": "Rolle auswählen",
+      "noUsers": "Keine Benutzer gefunden"
+    },
+    "roles": {
+      "teacher": "Lehrer",
+      "foodProvider": "Essensanbieter",
+      "admin": "Administrator"
+    },
+    "errorFetchingUsers": "Fehler beim Abrufen der Benutzer",
+    "userAdded": "Benutzer hinzugefügt",
+    "userAddedDescription": "Benutzer {email} wurde erfolgreich hinzugefügt",
+    "addError": "Fehler",
+    "errorAddingUser": "Fehler beim Hinzufügen des Benutzers",
+    "userUpdated": "Benutzer aktualisiert",
+    "userUpdatedDescription": "Benutzer {email} wurde erfolgreich aktualisiert",
+    "updateError": "Fehler",
+    "errorUpdatingUser": "Fehler beim Aktualisieren des Benutzers",
+    "userDeleted": "Benutzer gelöscht",
+    "userDeletedDescription": "Benutzer wurde erfolgreich gelöscht",
+    "deleteError": "Fehler",
+    "errorDeletingUser": "Fehler beim Löschen des Benutzers",
+    "confirmDeleteUser": "Sind Sie sicher, dass Sie diesen Benutzer löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "cancel": "Abbrechen",
+    "add": "Hinzufügen",
+    "save": "Speichern",
+    "requestDeclined": "Anfrage abgelehnt",
+    "userDeclined": "Benutzer {email} wurde abgelehnt und entfernt",
+    "fetchError": "Fehler",
+    "errorFetchingRequests": "Fehler beim Abrufen der Registrierungsanfragen",
+    "acceptError": "Fehler", 
+    "errorAcceptingRequest": "Fehler beim Akzeptieren der Registrierungsanfrage",
+    "declineError": "Fehler",
+    "errorDecliningRequest": "Fehler beim Ablehnen der Registrierungsanfrage"
   }
 }

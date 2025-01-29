@@ -119,15 +119,15 @@ function addMissingTranslationKeys(
 // Example usage:
 const translationsToAdd = new Map<string, string[]>([
   ['Admin', [
-    'generalTab.metrics.averageRevenuePerOrder',
-    'generalTab.metrics.dailyRevenue',
-    'generalTab.metrics.monthlyRevenue'
+    'requestDeclined',
+    'userDeclined',
+    'fetchError',
+    'errorFetchingRequests',
+    'acceptError',
+    'errorAcceptingRequest',
+    'declineError',
+    'errorDecliningRequest',
   ]],
-  ['Analytics', [
-    'metrics.averageOrderValue',
-    'metrics.dailyOrders',
-    'metrics.monthlyOrders'
-  ]]
 ])
 
 // Run the script
