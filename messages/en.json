@@ -290,6 +290,7 @@
         "totalItems": "Total Items",
         "activeNotifications": "{count} active notifications",
         "infoNotifications": "Info Notifications",
+        "successNotifications": "Success Notifications",
         "warningNotifications": "Warning Notifications",
         "errorNotifications": "Error Notifications",
         "averageRevenuePerOrder": "Average Revenue Per Order",

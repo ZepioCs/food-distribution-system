@@ -109,6 +109,6 @@ function getKeyValue(obj: TranslationKeys, path: string[]): string | undefined {
 }
 
 // Example usage:
-const sourceFile = './messages/en.json'  // English source file
+const sourceFile = './messages/ru.json'  // English source file
 const targetFile = './messages/es.json'  // Target language file
 findMissingKeys(sourceFile, targetFile)

@@ -290,6 +290,7 @@
         "totalItems": "Gesamtartikel",
         "activeNotifications": "{count} aktive Benachrichtigungen",
         "infoNotifications": "Info-Benachrichtigungen",
+        "successNotifications": "Erfolgsmeldungen",
         "warningNotifications": "Warnungsbenachrichtigungen",
         "errorNotifications": "Fehlerbenachrichtigungen",
         "averageRevenuePerOrder": "Durchschnittlicher Umsatz pro Bestellung",

@@ -290,6 +290,7 @@
         "totalItems": "Всего позиций",
         "activeNotifications": "{count} активных уведомлений",
         "infoNotifications": "Информационные уведомления",
+        "successNotifications": "Уведомления об успехе",
         "warningNotifications": "Предупреждающие уведомления",
         "errorNotifications": "Уведомления об ошибках",
         "averageRevenuePerOrder": "Средняя выручка за заказ",
