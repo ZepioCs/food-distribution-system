@@ -35,7 +35,10 @@ import {
   PlayIcon,
   TrophyIcon,
   FilterIcon,
-  PercentIcon
+  PercentIcon,
+  Download,
+  Play,
+  Square
 } from "lucide-react";
 import { getModelInfo } from "@/app/actions/get-model-info";
 import { getTrainingProgressAction } from '@/app/actions/get-training-progress';
@@ -45,6 +48,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 interface ModelInfo {
   architecture: {
@@ -193,6 +197,7 @@ const AIModelInfo: React.FC = () => {
   const [minAccuracy, setMinAccuracy] = useState<number | null>(null);
   const [timeFilter, setTimeFilter] = useState<string>('all');
   const [isNewestFirst, setIsNewestFirst] = useState(true);
+  const [isTrainingEnabled, setIsTrainingEnabled] = useState(false);
 
   // Filter logs based on selected criteria
   const filteredLogs = useMemo(() => {
@@ -335,6 +340,57 @@ const AIModelInfo: React.FC = () => {
     };
   }, []);
 
+  const handleStartTraining = async () => {
+    try {
+      setIsTrainingEnabled(true);
+      const response = await fetch('/api/ai/train', {
+        method: 'POST'
+      });
+      if (!response.ok) {
+        throw new Error('Failed to start training');
+      }
+    } catch (error) {
+      console.error('Error starting training:', error);
+      setError('Failed to start training');
+    }
+  };
+
+  const handleStopTraining = async () => {
+    try {
+      setIsTrainingEnabled(false);
+      const response = await fetch('/api/ai/train/stop', {
+        method: 'POST'
+      });
+      if (!response.ok) {
+        throw new Error('Failed to stop training');
+      }
+    } catch (error) {
+      console.error('Error stopping training:', error);
+      setError('Failed to stop training');
+    }
+  };
+
+  const handleExportModel = async () => {
+    try {
+      const response = await fetch('/api/ai/model/export');
+      if (!response.ok) {
+        throw new Error('Failed to export model');
+      }
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'model-export.json';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error('Error exporting model:', error);
+      setError('Failed to export model');
+    }
+  };
+
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -392,6 +448,36 @@ const AIModelInfo: React.FC = () => {
             <h1 className="text-2xl font-bold">AI Model Dashboard</h1>
             <p className="text-muted-foreground">Monitor and analyze your AI model's performance</p>
           </div>
+        </div>
+        <div className="flex items-center gap-2">
+          {!trainingProgress?.isTraining ? (
+            <Button
+              onClick={handleStartTraining}
+              disabled={isTrainingEnabled}
+              className="flex items-center gap-2"
+            >
+              <Play className="h-4 w-4" />
+              Start Training
+            </Button>
+          ) : (
+            <Button
+              onClick={handleStopTraining}
+              variant="destructive"
+              className="flex items-center gap-2"
+            >
+              <Square className="h-4 w-4" />
+              Stop Training
+            </Button>
+          )}
+          <Button
+            onClick={handleExportModel}
+            variant="outline"
+            className="flex items-center gap-2"
+            disabled={!modelInfo?.status.is_trained}
+          >
+            <Download className="h-4 w-4" />
+            Export Model
+          </Button>
         </div>
       </div>
 

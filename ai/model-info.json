@@ -21,15 +21,15 @@
     "outputLayer": 1
   },
   "training": {
-    "current_config": "{\"learningRate\":0.01,\"hiddenLayer1Size\":24,\"hiddenLayer2Size\":12,\"momentum\":0.8}",
-    "current_epoch": 18,
+    "current_config": "{\"learningRate\":0.1,\"hiddenLayer1Size\":24,\"hiddenLayer2Size\":16,\"momentum\":0.8}",
+    "current_epoch": 64,
     "total_epochs": 1000,
     "current_fold": 5,
     "total_folds": 5,
-    "train_accuracy": 0.9989803406934009,
-    "validation_accuracy": 0.9989803406934009,
-    "best_accuracy": 0.9989803406934009,
-    "last_training_session": "2025-01-31T11:40:25.112Z"
+    "train_accuracy": 0.997598083780071,
+    "validation_accuracy": 0.997598083780071,
+    "best_accuracy": 0.997598083780071,
+    "last_training_session": "2025-01-31T11:46:42.152Z"
   },
   "preprocessing": {
     "weekday": "One-hot encoding (5 categories)",
@@ -47,13 +47,13 @@
     "Perceptron architecture"
   ],
   "performance": {
-    "best_configuration": "{\"hiddenLayer1Size\":24,\"hiddenLayer2Size\":12,\"learningRate\":0.01,\"momentum\":0.8,\"validationError\":0.0010196593065990925,\"trainAccuracy\":0.9989803406934009,\"validationAccuracy\":0.9989803406934009}",
-    "validation_error": 0.0010196593065990925,
-    "average_prediction_time": 16.564800000000105,
-    "total_parameters": 817,
-    "memory_usage": 4292,
-    "best_accuracy": 0.9989803406934009,
-    "last_training_session": "2025-01-31T11:40:25.112Z"
+    "best_configuration": "{\"hiddenLayer1Size\":24,\"hiddenLayer2Size\":16,\"learningRate\":0.1,\"momentum\":0.8,\"validationError\":0.0024019162199290234,\"trainAccuracy\":0.997598083780071,\"validationAccuracy\":0.997598083780071}",
+    "validation_error": 0.0024019162199290234,
+    "average_prediction_time": 21.471500001847744,
+    "total_parameters": 921,
+    "memory_usage": 4708,
+    "best_accuracy": 0.997598083780071,
+    "last_training_session": "2025-01-31T11:46:42.152Z"
   },
   "usage": {
     "inputRanges": {
@@ -87,7 +87,7 @@
   "status": {
     "is_trained": true,
     "is_training": false,
-    "last_updated": "2025-01-31T11:40:25.112Z",
+    "last_updated": "2025-01-31T11:46:42.152Z",
     "last_error": null
   }
 }

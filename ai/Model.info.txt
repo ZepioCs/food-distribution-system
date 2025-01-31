@@ -27,21 +27,21 @@ Cross-validation Folds: 5
 
 Current Performance
 -----------------
-Best Accuracy: 99.90%
-Validation Error: 0.0010
-Average Prediction Time: 16.56ms
-Total Parameters: 817
+Best Accuracy: 99.76%
+Validation Error: 0.0024
+Average Prediction Time: 21.47ms
+Total Parameters: 921
 
 Best Configuration
 ----------------
 {
   "hiddenLayer1Size": 24,
-  "hiddenLayer2Size": 12,
-  "learningRate": 0.01,
+  "hiddenLayer2Size": 16,
+  "learningRate": 0.1,
   "momentum": 0.8,
-  "validationError": 0.0010196593065990925,
-  "trainAccuracy": 0.9989803406934009,
-  "validationAccuracy": 0.9989803406934009
+  "validationError": 0.0024019162199290234,
+  "trainAccuracy": 0.997598083780071,
+  "validationAccuracy": 0.997598083780071
 }
 
 Input Ranges
@@ -57,7 +57,7 @@ Output Range
 Meal Count: 0-500
 Rounding Factor: 5
 
-Last Updated: 31.1.2025, 12:40:25
+Last Updated: 31.1.2025, 12:46:42
 Training Status: Trained
 
 Notes

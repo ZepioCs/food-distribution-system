@@ -129,6 +129,15 @@ function validateTrainingData(data: TrainingDataPoint[]): boolean {
   return true;
 }
 
+function checkStopSignal(): boolean {
+  const stopSignalPath = path.join(process.cwd(), 'ai', 'stop-training');
+  if (fs.existsSync(stopSignalPath)) {
+    fs.unlinkSync(stopSignalPath);
+    return true;
+  }
+  return false;
+}
+
 function trainAndValidate(
   trainingSet: TrainingDataPoint[],
   validationSet: TrainingDataPoint[],
@@ -148,6 +157,12 @@ function trainAndValidate(
   
   try {
     for (let epoch = 0; epoch < epochs; epoch++) {
+      // Check for stop signal at the start of each epoch
+      if (checkStopSignal()) {
+        console.log('Training stopped by user during epoch');
+        break;
+      }
+
       // Training phase
       let trainingError = 0;
       const shuffledTraining = shuffleArray(trainingSet);
@@ -368,7 +383,22 @@ async function autoTrain(options: Partial<TrainingOptions> = {}): Promise<void> 
   const dataSplits = splitDataset(trainingData, trainingOptions.folds);
   
   try {
+    // Remove any existing stop signal
+    const stopSignalPath = path.join(process.cwd(), 'ai', 'stop-training');
+    if (fs.existsSync(stopSignalPath)) {
+      fs.unlinkSync(stopSignalPath);
+    }
+
     for (let configIndex = 0; configIndex < configs.length; configIndex++) {
+      // Check for stop signal at the start of each configuration
+      if (checkStopSignal()) {
+        addTrainingLog({
+          type: 'complete',
+          message: 'Training stopped by user'
+        });
+        return;
+      }
+
       const config = configs[configIndex];
       let totalError = 0;
       let currentTrainAccuracy = 0;
@@ -430,6 +460,15 @@ async function autoTrain(options: Partial<TrainingOptions> = {}): Promise<void> 
       });
       
       for (let i = 0; i < trainingOptions.folds; i++) {
+        // Check for stop signal at the start of each fold
+        if (checkStopSignal()) {
+          addTrainingLog({
+            type: 'complete',
+            message: 'Training stopped by user'
+          });
+          return;
+        }
+
         updateNewProgress({
           currentFold: i + 1
         });
@@ -529,6 +568,12 @@ async function autoTrain(options: Partial<TrainingOptions> = {}): Promise<void> 
     });
     throw err;
   } finally {
+    // Clean up stop signal if it exists
+    const stopSignalPath = path.join(process.cwd(), 'ai', 'stop-training');
+    if (fs.existsSync(stopSignalPath)) {
+      fs.unlinkSync(stopSignalPath);
+    }
+
     // Always clear progress when done
     updateNewProgress({
       isTraining: false,
