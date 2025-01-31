@@ -1,0 +1,19 @@
+{
+  "isTraining": false,
+  "configNumber": 0,
+  "totalConfigs": 0,
+  "currentFold": 0,
+  "totalFolds": 0,
+  "currentConfig": {
+    "learningRate": 0,
+    "hiddenLayer1Size": 0,
+    "hiddenLayer2Size": 0,
+    "momentum": 0
+  },
+  "currentEpoch": 0,
+  "totalEpochs": 0,
+  "trainAccuracy": 0.9953713660439243,
+  "validationAccuracy": 0.9936072533971292,
+  "bestAccuracy": 0.9936204566902065,
+  "lastUpdate": "2025-01-31T11:40:25.143Z"
+}

@@ -1,0 +1,81 @@
+{
+  "architecture": {
+    "input": {
+      "size": 20,
+      "features": {
+        "weekday": 5,
+        "month": 12,
+        "temperature": 1,
+        "rain": 1,
+        "event": 1
+      }
+    },
+    "hidden": [
+      {
+        "size_range": [16, 44],
+        "activation": "sigmoid"
+      },
+      {
+        "size_range": [8, 22],
+        "activation": "sigmoid"
+      }
+    ],
+    "output": {
+      "size": 1,
+      "activation": "sigmoid"
+    }
+  },
+  "training": {
+    "hyperparameters": {
+      "learning_rate": {
+        "min": 0.01,
+        "max": 0.15
+      },
+      "momentum": {
+        "min": 0.8,
+        "max": 0.95
+      },
+      "batch_size": 32,
+      "epochs": 1000
+    },
+    "early_stopping": {
+      "patience": 10,
+      "min_delta": 0.0001
+    },
+    "cross_validation": {
+      "folds": 5
+    }
+  },
+  "preprocessing": {
+    "features": {
+      "weekday": {
+        "type": "one_hot",
+        "categories": 5
+      },
+      "month": {
+        "type": "one_hot",
+        "categories": 12
+      },
+      "temperature": {
+        "type": "seasonal_normalize",
+        "ranges": [
+          {"season": "winter", "min": -30, "max": 15},
+          {"season": "spring", "min": -10, "max": 25},
+          {"season": "summer", "min": 5, "max": 50},
+          {"season": "fall", "min": -10, "max": 25}
+        ]
+      },
+      "rain": {
+        "type": "binary"
+      },
+      "event": {
+        "type": "binary"
+      }
+    },
+    "output": {
+      "type": "normalize",
+      "range": [0, 500],
+      "rounding": 5
+    }
+  }
+} 

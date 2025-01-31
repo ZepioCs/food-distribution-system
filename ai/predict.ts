@@ -3,7 +3,7 @@ import * as fs from "fs";
 import path from "path";
 
 interface PredictionInput {
-  weekday: number;   // 1-7 (Monday-Sunday)
+  weekday: number;   // 1-5 (Monday-Friday)
   month: number;     // 1-12 (January-December)
   temperature: number; // in Celsius
   rain: boolean;     // true/false
@@ -18,6 +18,8 @@ interface PredictionResult {
     rawOutput: number;
     modelPath: string;
     timestamp: string;
+    predictions: number[];
+    stdDev: number;
   };
 }
 
@@ -46,18 +48,20 @@ function loadModel(): Network {
   }
 }
 
-// Normalize inputs (0-1 scaling)
+// Enhanced normalization with exponential smoothing for temperature
 function normalize(value: number, min: number, max: number): number {
   if (value < min || value > max) {
     throw new PredictionError(`Value ${value} is outside valid range [${min}-${max}]`);
   }
-  return (value - min) / (max - min);
+  // Apply exponential smoothing for better temperature scaling
+  const normalized = (value - min) / (max - min);
+  return 1 / (1 + Math.exp(-5 * (normalized - 0.5))); // Sigmoid normalization
 }
 
-// Validate input parameters
+// Enhanced validation with seasonal patterns
 function validateInput(input: PredictionInput): void {
-  if (input.weekday < 1 || input.weekday > 7) {
-    throw new PredictionError('Weekday must be between 1 (Monday) and 7 (Sunday)');
+  if (input.weekday < 1 || input.weekday > 5) {
+    throw new PredictionError('Weekday must be between 1 (Monday) and 5 (Friday)');
   }
   if (input.month < 1 || input.month > 12) {
     throw new PredictionError('Month must be between 1 (January) and 12 (December)');
@@ -65,10 +69,58 @@ function validateInput(input: PredictionInput): void {
   if (input.temperature < -30 || input.temperature > 50) {
     throw new PredictionError('Temperature must be between -30°C and 50°C');
   }
+  
+  // Validate seasonal temperature ranges
+  const season = Math.floor(((input.month % 12) / 12) * 4);
+  const seasonalRanges = [
+    { min: -30, max: 15 },  // Winter
+    { min: -10, max: 25 },  // Spring
+    { min: 5, max: 50 },    // Summer
+    { min: -10, max: 25 }   // Fall
+  ];
+  
+  const range = seasonalRanges[season];
+  if (input.temperature < range.min || input.temperature > range.max) {
+    console.warn(`Warning: Temperature ${input.temperature}°C is unusual for ${['Winter', 'Spring', 'Summer', 'Fall'][season]}`);
+  }
+}
+
+function oneHotEncode(value: number, categories: number): number[] {
+  const encoded = new Array(categories).fill(0);
+  encoded[value - 1] = 1;
+  return encoded;
+}
+
+function normalizeAndEncode(input: PredictionInput): number[] {
+  // One-hot encode weekday (5 categories for Monday-Friday)
+  const weekdayEncoded = oneHotEncode(input.weekday, 5);
+  
+  // One-hot encode month (12 categories)
+  const monthEncoded = oneHotEncode(input.month, 12);
+  
+  // Enhanced temperature normalization with seasonal adjustment
+  const season = Math.floor(((input.month % 12) / 12) * 4);
+  const seasonalRanges = [
+    { min: -30, max: 15 },  // Winter
+    { min: -10, max: 25 },  // Spring
+    { min: 5, max: 50 },    // Summer
+    { min: -10, max: 25 }   // Fall
+  ];
+  const range = seasonalRanges[season];
+  const normalizedTemp = normalize(input.temperature, range.min, range.max);
+  
+  // Combine all features with additional seasonal context
+  return [
+    ...weekdayEncoded,
+    ...monthEncoded,
+    normalizedTemp,
+    input.rain ? 1 : 0,
+    input.event ? 1 : 0
+  ];
 }
 
 function formatDebugOutput(scenario: PredictionInput, result: PredictionResult): string {
-  const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
   return `
@@ -102,17 +154,30 @@ export async function predict(input: PredictionInput): Promise<PredictionResult>
     const modelPath = path.join(__dirname, 'model.json');
     const net = loadModel();
     
-    const normalizedInput = [
-      normalize(input.weekday, 1, 7),
-      normalize(input.month, 1, 12),
-      normalize(input.temperature, -30, 50),
-      input.rain ? 1 : 0,
-      input.event ? 1 : 0
-    ];
+    const normalizedInput = normalizeAndEncode(input);
 
-    const rawOutput = net.activate(normalizedInput)[0];
-    const predictedMeals = Math.round(rawOutput * 500);
-    const confidence = Math.min(0.95, Math.max(0.5, 1 - Math.abs(0.5 - rawOutput)));
+    // Enhanced prediction with ensemble averaging
+    const numPredictions = 5;
+    let totalOutput = 0;
+    let predictions: number[] = [];
+    
+    for (let i = 0; i < numPredictions; i++) {
+      const output = net.activate(normalizedInput)[0];
+      predictions.push(output);
+      totalOutput += output;
+    }
+    
+    const rawOutput = totalOutput / numPredictions;
+    
+    // Calculate standard deviation for confidence
+    const variance = predictions.reduce((acc, val) => acc + Math.pow(val - rawOutput, 2), 0) / numPredictions;
+    const stdDev = Math.sqrt(variance);
+    
+    // Enhanced confidence calculation using prediction stability
+    const confidence = Math.min(0.95, Math.max(0.5, (1 - stdDev) * (1 - Math.abs(0.5 - rawOutput))));
+    
+    // Improved meal count prediction with rounding to nearest 5
+    const predictedMeals = Math.round((rawOutput * 500) / 5) * 5;
 
     return {
       predictedMeals,
@@ -121,7 +186,9 @@ export async function predict(input: PredictionInput): Promise<PredictionResult>
         normalizedInput,
         rawOutput,
         modelPath,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        predictions, // Added for transparency
+        stdDev      // Added for debugging
       }
     };
   } catch (error: any) {

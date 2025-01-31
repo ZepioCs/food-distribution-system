@@ -1,0 +1,312 @@
+[
+  {
+    "type": "start",
+    "message": "Starting training with 10 configurations and 5-fold cross-validation",
+    "timestamp": "2025-01-31T11:40:02.550Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 1/10",
+    "config": {
+      "learningRate": 0.1,
+      "hiddenLayer1Size": 16,
+      "hiddenLayer2Size": 8,
+      "momentum": 0.9
+    },
+    "timestamp": "2025-01-31T11:40:02.552Z"
+  },
+  {
+    "type": "best",
+    "message": "New best model found! Accuracy: 99.00%",
+    "config": {
+      "learningRate": 0.1,
+      "hiddenLayer1Size": 16,
+      "hiddenLayer2Size": 8,
+      "momentum": 0.9
+    },
+    "metrics": {
+      "trainAccuracy": 0.9945881525329526,
+      "validationAccuracy": 0.99,
+      "error": 0.005411847467047387
+    },
+    "timestamp": "2025-01-31T11:40:02.787Z"
+  },
+  {
+    "type": "best",
+    "message": "New best model found! Accuracy: 99.00%",
+    "config": {
+      "learningRate": 0.1,
+      "hiddenLayer1Size": 16,
+      "hiddenLayer2Size": 8,
+      "momentum": 0.9
+    },
+    "metrics": {
+      "trainAccuracy": 0.9950642416525693,
+      "validationAccuracy": 0.99,
+      "error": 0.004459669227813977
+    },
+    "timestamp": "2025-01-31T11:40:02.892Z"
+  },
+  {
+    "type": "best",
+    "message": "New best model found! Accuracy: 99.00%",
+    "config": {
+      "learningRate": 0.1,
+      "hiddenLayer1Size": 16,
+      "hiddenLayer2Size": 8,
+      "momentum": 0.9
+    },
+    "metrics": {
+      "trainAccuracy": 0.9954711132748083,
+      "validationAccuracy": 0.99,
+      "error": 0.001029789208075295
+    },
+    "timestamp": "2025-01-31T11:40:03.094Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 1/10 completed",
+    "metrics": {
+      "error": 0.004896608114360049,
+      "validationAccuracy": 0.9951033918856399
+    },
+    "timestamp": "2025-01-31T11:40:03.228Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 2/10",
+    "config": {
+      "learningRate": 0.05,
+      "hiddenLayer1Size": 32,
+      "hiddenLayer2Size": 12,
+      "momentum": 0.9
+    },
+    "timestamp": "2025-01-31T11:40:03.230Z"
+  },
+  {
+    "type": "best",
+    "message": "New best model found! Accuracy: 99.00%",
+    "config": {
+      "learningRate": 0.05,
+      "hiddenLayer1Size": 32,
+      "hiddenLayer2Size": 12,
+      "momentum": 0.9
+    },
+    "metrics": {
+      "trainAccuracy": 0.9953669677257009,
+      "validationAccuracy": 0.99,
+      "error": 0.0010239788177993825
+    },
+    "timestamp": "2025-01-31T11:40:05.455Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 2/10 completed",
+    "metrics": {
+      "error": 0.004983251619245082,
+      "validationAccuracy": 0.9950167483807549
+    },
+    "timestamp": "2025-01-31T11:40:05.877Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 3/10",
+    "config": {
+      "learningRate": 0.01,
+      "hiddenLayer1Size": 32,
+      "hiddenLayer2Size": 16,
+      "momentum": 0.9
+    },
+    "timestamp": "2025-01-31T11:40:05.877Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 3/10 completed",
+    "metrics": {
+      "error": 0.005073446812689751,
+      "validationAccuracy": 0.9949265531873103
+    },
+    "timestamp": "2025-01-31T11:40:11.044Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 4/10",
+    "config": {
+      "learningRate": 0.1,
+      "hiddenLayer1Size": 16,
+      "hiddenLayer2Size": 8,
+      "momentum": 0.8
+    },
+    "timestamp": "2025-01-31T11:40:11.045Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 4/10 completed",
+    "metrics": {
+      "error": 0.004931409100312832,
+      "validationAccuracy": 0.9950685908996871
+    },
+    "timestamp": "2025-01-31T11:40:11.550Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 5/10",
+    "config": {
+      "learningRate": 0.01,
+      "hiddenLayer1Size": 24,
+      "hiddenLayer2Size": 12,
+      "momentum": 0.9
+    },
+    "timestamp": "2025-01-31T11:40:11.551Z"
+  },
+  {
+    "type": "best",
+    "message": "New best model found! Accuracy: 99.00%",
+    "config": {
+      "learningRate": 0.01,
+      "hiddenLayer1Size": 24,
+      "hiddenLayer2Size": 12,
+      "momentum": 0.9
+    },
+    "metrics": {
+      "trainAccuracy": 0.9952712539618809,
+      "validationAccuracy": 0.99,
+      "error": 0.0010231709854518034
+    },
+    "timestamp": "2025-01-31T11:40:13.805Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 5/10 completed",
+    "metrics": {
+      "error": 0.00505762024813079,
+      "validationAccuracy": 0.9949423797518692
+    },
+    "timestamp": "2025-01-31T11:40:14.702Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 6/10",
+    "config": {
+      "learningRate": 0.1,
+      "hiddenLayer1Size": 16,
+      "hiddenLayer2Size": 12,
+      "momentum": 0.8
+    },
+    "timestamp": "2025-01-31T11:40:14.703Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 6/10 completed",
+    "metrics": {
+      "error": 0.004981663549780848,
+      "validationAccuracy": 0.9950183364502192
+    },
+    "timestamp": "2025-01-31T11:40:15.750Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 7/10",
+    "config": {
+      "learningRate": 0.01,
+      "hiddenLayer1Size": 32,
+      "hiddenLayer2Size": 16,
+      "momentum": 0.8
+    },
+    "timestamp": "2025-01-31T11:40:15.750Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 7/10 completed",
+    "metrics": {
+      "error": 0.005081482152614408,
+      "validationAccuracy": 0.9949185178473856
+    },
+    "timestamp": "2025-01-31T11:40:20.389Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 8/10",
+    "config": {
+      "learningRate": 0.05,
+      "hiddenLayer1Size": 16,
+      "hiddenLayer2Size": 8,
+      "momentum": 0.8
+    },
+    "timestamp": "2025-01-31T11:40:20.390Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 8/10 completed",
+    "metrics": {
+      "error": 0.005000815905984363,
+      "validationAccuracy": 0.9949991840940157
+    },
+    "timestamp": "2025-01-31T11:40:21.279Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 9/10",
+    "config": {
+      "learningRate": 0.01,
+      "hiddenLayer1Size": 24,
+      "hiddenLayer2Size": 12,
+      "momentum": 0.8
+    },
+    "timestamp": "2025-01-31T11:40:21.279Z"
+  },
+  {
+    "type": "best",
+    "message": "New best model found! Accuracy: 99.00%",
+    "config": {
+      "learningRate": 0.01,
+      "hiddenLayer1Size": 24,
+      "hiddenLayer2Size": 12,
+      "momentum": 0.8
+    },
+    "metrics": {
+      "trainAccuracy": 0.9952576044253745,
+      "validationAccuracy": 0.99,
+      "error": 0.0010196593065990925
+    },
+    "timestamp": "2025-01-31T11:40:23.862Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 9/10 completed",
+    "metrics": {
+      "error": 0.005071281034201567,
+      "validationAccuracy": 0.9949287189657985
+    },
+    "timestamp": "2025-01-31T11:40:24.429Z"
+  },
+  {
+    "type": "progress",
+    "message": "Starting configuration 10/10",
+    "config": {
+      "learningRate": 0.05,
+      "hiddenLayer1Size": 16,
+      "hiddenLayer2Size": 8,
+      "momentum": 0.9
+    },
+    "timestamp": "2025-01-31T11:40:24.429Z"
+  },
+  {
+    "type": "progress",
+    "message": "Configuration 10/10 completed",
+    "metrics": {
+      "error": 0.005060625415106353,
+      "validationAccuracy": 0.9949393745848937
+    },
+    "timestamp": "2025-01-31T11:40:25.089Z"
+  },
+  {
+    "type": "complete",
+    "message": "Training completed successfully",
+    "metrics": {
+      "error": 0.0010196593065990925,
+      "validationAccuracy": 0.9989803406934009
+    },
+    "timestamp": "2025-01-31T11:40:25.094Z"
+  }
+]

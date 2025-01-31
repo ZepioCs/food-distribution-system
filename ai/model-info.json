@@ -1,0 +1,93 @@
+{
+  "architecture": {
+    "inputLayer": {
+      "total": 20,
+      "weekday": 5,
+      "month": 12,
+      "temperature": 1,
+      "rain": 1,
+      "event": 1
+    },
+    "hiddenLayers": {
+      "layer1Range": [
+        16,
+        44
+      ],
+      "layer2Range": [
+        8,
+        22
+      ]
+    },
+    "outputLayer": 1
+  },
+  "training": {
+    "current_config": "{\"learningRate\":0.01,\"hiddenLayer1Size\":24,\"hiddenLayer2Size\":12,\"momentum\":0.8}",
+    "current_epoch": 18,
+    "total_epochs": 1000,
+    "current_fold": 5,
+    "total_folds": 5,
+    "train_accuracy": 0.9989803406934009,
+    "validation_accuracy": 0.9989803406934009,
+    "best_accuracy": 0.9989803406934009,
+    "last_training_session": "2025-01-31T11:40:25.112Z"
+  },
+  "preprocessing": {
+    "weekday": "One-hot encoding (5 categories)",
+    "month": "One-hot encoding (12 categories)",
+    "temperature": "Seasonal normalization with sigmoid scaling",
+    "rain": "Binary (0/1)",
+    "event": "Binary (0/1)"
+  },
+  "features": [
+    "Seasonal temperature adjustment",
+    "Momentum-based learning",
+    "Early stopping",
+    "Cross-validation",
+    "Mean squared error loss function",
+    "Perceptron architecture"
+  ],
+  "performance": {
+    "best_configuration": "{\"hiddenLayer1Size\":24,\"hiddenLayer2Size\":12,\"learningRate\":0.01,\"momentum\":0.8,\"validationError\":0.0010196593065990925,\"trainAccuracy\":0.9989803406934009,\"validationAccuracy\":0.9989803406934009}",
+    "validation_error": 0.0010196593065990925,
+    "average_prediction_time": 16.564800000000105,
+    "total_parameters": 817,
+    "memory_usage": 4292,
+    "best_accuracy": 0.9989803406934009,
+    "last_training_session": "2025-01-31T11:40:25.112Z"
+  },
+  "usage": {
+    "inputRanges": {
+      "weekday": [
+        1,
+        5
+      ],
+      "month": [
+        1,
+        12
+      ],
+      "temperature": [
+        -30,
+        50
+      ],
+      "rain": "true/false",
+      "event": "true/false"
+    },
+    "outputRange": [
+      0,
+      500
+    ],
+    "roundingFactor": 5
+  },
+  "limitations": [
+    "Limited to weekday predictions only",
+    "Assumes consistent meal patterns within seasons",
+    "May need retraining as patterns change",
+    "Best performance within typical temperature ranges for each season"
+  ],
+  "status": {
+    "is_trained": true,
+    "is_training": false,
+    "last_updated": "2025-01-31T11:40:25.112Z",
+    "last_error": null
+  }
+}

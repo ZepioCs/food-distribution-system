@@ -37,6 +37,7 @@ function Layout({ children }: {children: React.ReactNode}) {
     { name: t('Navigation.reports'), href: "/reports", roles: [EUserRole.FOOD_PROVIDER, EUserRole.ADMIN] },
     { name: t('Navigation.menuManagement'), href: "/menu", roles: [EUserRole.FOOD_PROVIDER, EUserRole.ADMIN] },
     { name: t('Navigation.analytics'), href: "/analytics", roles: [EUserRole.FOOD_PROVIDER, EUserRole.ADMIN] },
+    { name: t('Navigation.aiModel'), href: "/ai-model", roles: [EUserRole.ADMIN] },
     { name: t('Navigation.profile'), href: "/profile", roles: [EUserRole.TEACHER, EUserRole.FOOD_PROVIDER, EUserRole.ADMIN] },
     { name: t('Navigation.settings'), href: "/settings", roles: [EUserRole.TEACHER, EUserRole.FOOD_PROVIDER, EUserRole.ADMIN] },
     { name: t('Navigation.feedback'), href: "/feedback", roles: [EUserRole.TEACHER, EUserRole.FOOD_PROVIDER, EUserRole.ADMIN] }

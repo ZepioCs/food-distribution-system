@@ -1,0 +1,69 @@
+Neural Network Model for Meal Count Prediction
+===========================================
+
+Architecture
+-----------
+Input Layer: 20 neurons
+- Weekday (5 neurons, one-hot encoded)
+- Month (12 neurons, one-hot encoded)
+- Temperature (1 neuron, seasonally normalized)
+- Rain (1 neuron, binary)
+- Event (1 neuron, binary)
+
+Hidden Layers:
+1. 16-44 neurons (sigmoid)
+2. 8-22 neurons (sigmoid)
+
+Output Layer: 1 neuron (sigmoid)
+
+Training Configuration
+--------------------
+Learning Rate Range: 0.01-0.15
+Momentum Range: 0.8-0.95
+Batch Size: 32
+Maximum Epochs: 1000
+Early Stopping Patience: 10
+Cross-validation Folds: 5
+
+Current Performance
+-----------------
+Best Accuracy: 99.90%
+Validation Error: 0.0010
+Average Prediction Time: 16.56ms
+Total Parameters: 817
+
+Best Configuration
+----------------
+{
+  "hiddenLayer1Size": 24,
+  "hiddenLayer2Size": 12,
+  "learningRate": 0.01,
+  "momentum": 0.8,
+  "validationError": 0.0010196593065990925,
+  "trainAccuracy": 0.9989803406934009,
+  "validationAccuracy": 0.9989803406934009
+}
+
+Input Ranges
+-----------
+Weekday: 1-5 (Monday to Friday)
+Month: 1-12
+Temperature: -30°C to 50°C
+Rain: Yes/No
+Event: Yes/No
+
+Output Range
+-----------
+Meal Count: 0-500
+Rounding Factor: 5
+
+Last Updated: 31.1.2025, 12:40:25
+Training Status: Trained
+
+Notes
+-----
+- Model uses seasonal temperature normalization for better accuracy
+- Early stopping prevents overfitting
+- Cross-validation ensures robust performance
+- Momentum-based learning for faster convergence
+- Predictions are rounded to nearest 5 meals
