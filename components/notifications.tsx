@@ -9,7 +9,7 @@ import { dbService } from "@/services/db.service"
 import { INotification } from "@/models/default"
 import { useRootStore } from "@/providers/store-provider"
 import { cn } from "@/lib/utils"
-import { supabase } from "@/services/auth.service"
+import { supabase } from "@/lib/supabase"
 import { useTranslations } from 'next-intl'
 
 const getNotificationStyles = (type: INotification['type']) => {

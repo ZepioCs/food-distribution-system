@@ -21,7 +21,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { EUserRole } from "@/models/default"
-import { supabase } from "@/services/auth.service"
+import { supabase } from "@/lib/supabase"
 
 interface RegisterRequest {
   id: string

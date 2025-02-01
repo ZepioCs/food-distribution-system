@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Switch } from "@/components/ui/switch"
 import { useToast } from "@/components/ui/use-toast"
 import { dbService } from "@/services/db.service"
-import { supabase } from "@/services/auth.service"
+import { supabase } from "@/lib/supabase"
 import { IProfile } from "@/models/default"
 
 export default function UserProfile() {
@@ -103,30 +103,6 @@ export default function UserProfile() {
     }
   }
 
-  const handleAvatarChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (!file) return
-
-    try {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (user) {
-        const publicUrl = await dbService.updateAvatar(user.id, file)
-        setProfile(prev => prev ? {...prev, avatar_url: publicUrl} : null)
-        toast({
-          title: "Success",
-          description: "Profile picture updated successfully"
-        })
-      }
-    } catch (error) {
-      console.error('Error uploading avatar:', error)
-      toast({
-        title: "Error",
-        description: "Failed to update profile picture",
-        variant: "destructive"
-      })
-    }
-  }
-
   const handleDietaryPreferenceChange = (key: keyof NonNullable<IProfile['dietary_preferences']>, checked: boolean) => {
     setProfile(prev => {
       if (!prev) return null
@@ -185,7 +161,6 @@ export default function UserProfile() {
                       id="avatar" 
                       type="file" 
                       accept="image/*"
-                      onChange={handleAvatarChange}
                     />
                   </div>
                 </div>

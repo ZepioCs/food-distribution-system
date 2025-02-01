@@ -12,8 +12,8 @@
   },
   "currentEpoch": 0,
   "totalEpochs": 0,
-  "trainAccuracy": 0.9950055281435886,
-  "validationAccuracy": 0.9953401658677926,
-  "bestAccuracy": 0.9953405670249948,
-  "lastUpdate": "2025-01-31T11:46:42.315Z"
+  "trainAccuracy": 0.9958809827555563,
+  "validationAccuracy": 0.9916440027907639,
+  "bestAccuracy": 0.9924857806571227,
+  "lastUpdate": "2025-02-01T13:06:51.189Z"
 }

@@ -1,16 +1,5 @@
-import { createClient } from '@supabase/supabase-js'
+import { supabase } from '@/lib/supabase'
 import { EUserRole } from '@/models/default'
-
-const supabaseUrl = 'https://cjchxqsljrbuporgvrza.supabase.co'
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY ?? ""
-const supabase = createClient(supabaseUrl, supabaseKey, {
-  auth: {
-    autoRefreshToken: true,
-    persistSession: true,
-    storageKey: 'fooddist_auth_token',
-    storage: typeof window !== 'undefined' ? window.localStorage : undefined
-  }
-})
 
 export interface AuthCredentials {
   email: string

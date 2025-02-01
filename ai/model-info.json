@@ -21,15 +21,15 @@
     "outputLayer": 1
   },
   "training": {
-    "current_config": "{\"learningRate\":0.1,\"hiddenLayer1Size\":24,\"hiddenLayer2Size\":16,\"momentum\":0.8}",
-    "current_epoch": 64,
+    "current_config": "{\"learningRate\":0.1,\"hiddenLayer1Size\":32,\"hiddenLayer2Size\":16,\"momentum\":0.8}",
+    "current_epoch": 11,
     "total_epochs": 1000,
     "current_fold": 5,
     "total_folds": 5,
-    "train_accuracy": 0.997598083780071,
-    "validation_accuracy": 0.997598083780071,
-    "best_accuracy": 0.997598083780071,
-    "last_training_session": "2025-01-31T11:46:42.152Z"
+    "train_accuracy": 0.9986960850705134,
+    "validation_accuracy": 0.9986960850705134,
+    "best_accuracy": 0.9986960850705134,
+    "last_training_session": "2025-02-01T13:06:51.117Z"
   },
   "preprocessing": {
     "weekday": "One-hot encoding (5 categories)",
@@ -47,13 +47,13 @@
     "Perceptron architecture"
   ],
   "performance": {
-    "best_configuration": "{\"hiddenLayer1Size\":24,\"hiddenLayer2Size\":16,\"learningRate\":0.1,\"momentum\":0.8,\"validationError\":0.0024019162199290234,\"trainAccuracy\":0.997598083780071,\"validationAccuracy\":0.997598083780071}",
-    "validation_error": 0.0024019162199290234,
-    "average_prediction_time": 21.471500001847744,
-    "total_parameters": 921,
-    "memory_usage": 4708,
-    "best_accuracy": 0.997598083780071,
-    "last_training_session": "2025-01-31T11:46:42.152Z"
+    "best_configuration": "{\"hiddenLayer1Size\":32,\"hiddenLayer2Size\":16,\"learningRate\":0.1,\"momentum\":0.8,\"validationError\":0.001303914929486532,\"trainAccuracy\":0.9986960850705134,\"validationAccuracy\":0.9986960850705134}",
+    "validation_error": 0.001303914929486532,
+    "average_prediction_time": 19.193399999989197,
+    "total_parameters": 1217,
+    "memory_usage": 5892,
+    "best_accuracy": 0.9986960850705134,
+    "last_training_session": "2025-02-01T13:06:51.117Z"
   },
   "usage": {
     "inputRanges": {
@@ -87,7 +87,7 @@
   "status": {
     "is_trained": true,
     "is_training": false,
-    "last_updated": "2025-01-31T11:46:42.152Z",
+    "last_updated": "2025-02-01T13:06:51.117Z",
     "last_error": null
   }
 }

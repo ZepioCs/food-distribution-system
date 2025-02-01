@@ -9,8 +9,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/components/ui/use-toast"
 import { dbService } from "@/services/db.service"
-import { supabase } from "@/services/auth.service"
 import { IProfile } from "@/models/default"
+import { supabase } from "@/lib/supabase"
 
 export default function TestDashboard() {
   const { toast } = useToast()

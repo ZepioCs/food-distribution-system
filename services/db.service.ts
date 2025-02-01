@@ -1,4 +1,4 @@
-import { supabase } from "@/services/auth.service";
+import { supabase } from "@/lib/supabase";
 import { ICategory, IFeedback, IMeal, IMealHistory, INotification, IPrediction, IProfile, IRegisterRequest } from "@/models/default";
 
 const dbService = {
